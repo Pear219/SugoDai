@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		4189958F27A0429000ADEFA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4189958E27A0429000ADEFA9 /* AppDelegate.swift */; };
 		4189959127A0429000ADEFA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4189959027A0429000ADEFA9 /* SceneDelegate.swift */; };
-		4189959327A0429000ADEFA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4189959227A0429000ADEFA9 /* ViewController.swift */; };
 		4189959627A0429000ADEFA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4189959427A0429000ADEFA9 /* Main.storyboard */; };
 		4189959827A0429200ADEFA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4189959727A0429200ADEFA9 /* Assets.xcassets */; };
 		4189959B27A0429200ADEFA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4189959927A0429200ADEFA9 /* LaunchScreen.storyboard */; };
 		418995A627A0429200ADEFA9 /* SugoDaiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418995A527A0429200ADEFA9 /* SugoDaiTests.swift */; };
 		418995B127A0429200ADEFA9 /* SugoDaiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418995B027A0429200ADEFA9 /* SugoDaiUITests.swift */; };
+		418995BF27A0430F00ADEFA9 /* 選択コマ.png in Resources */ = {isa = PBXBuildFile; fileRef = 418995BE27A0430F00ADEFA9 /* 選択コマ.png */; };
+		418995C127A043C400ADEFA9 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418995C027A043C400ADEFA9 /* SelectViewController.swift */; };
+		418995C327A136A000ADEFA9 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418995C227A136A000ADEFA9 /* PickerViewController.swift */; };
+		418995C527A1482900ADEFA9 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418995C427A1482900ADEFA9 /* TimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,6 @@
 		4189958B27A0429000ADEFA9 /* SugoDai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SugoDai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4189958E27A0429000ADEFA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4189959027A0429000ADEFA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4189959227A0429000ADEFA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4189959527A0429000ADEFA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4189959727A0429200ADEFA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4189959A27A0429200ADEFA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,10 @@
 		418995AC27A0429200ADEFA9 /* SugoDaiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SugoDaiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		418995B027A0429200ADEFA9 /* SugoDaiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugoDaiUITests.swift; sourceTree = "<group>"; };
 		418995B227A0429200ADEFA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		418995BE27A0430F00ADEFA9 /* 選択コマ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "選択コマ.png"; sourceTree = "<group>"; };
+		418995C027A043C400ADEFA9 /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
+		418995C227A136A000ADEFA9 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		418995C427A1482900ADEFA9 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 		4189958227A0429000ADEFA9 = {
 			isa = PBXGroup;
 			children = (
+				418995BE27A0430F00ADEFA9 /* 選択コマ.png */,
 				4189958D27A0429000ADEFA9 /* SugoDai */,
 				418995A427A0429200ADEFA9 /* SugoDaiTests */,
 				418995AF27A0429200ADEFA9 /* SugoDaiUITests */,
@@ -101,11 +108,13 @@
 			children = (
 				4189958E27A0429000ADEFA9 /* AppDelegate.swift */,
 				4189959027A0429000ADEFA9 /* SceneDelegate.swift */,
-				4189959227A0429000ADEFA9 /* ViewController.swift */,
 				4189959427A0429000ADEFA9 /* Main.storyboard */,
 				4189959727A0429200ADEFA9 /* Assets.xcassets */,
 				4189959927A0429200ADEFA9 /* LaunchScreen.storyboard */,
 				4189959C27A0429200ADEFA9 /* Info.plist */,
+				418995C027A043C400ADEFA9 /* SelectViewController.swift */,
+				418995C227A136A000ADEFA9 /* PickerViewController.swift */,
+				418995C427A1482900ADEFA9 /* TimerViewController.swift */,
 			);
 			path = SugoDai;
 			sourceTree = "<group>";
@@ -233,6 +242,7 @@
 			files = (
 				4189959B27A0429200ADEFA9 /* LaunchScreen.storyboard in Resources */,
 				4189959827A0429200ADEFA9 /* Assets.xcassets in Resources */,
+				418995BF27A0430F00ADEFA9 /* 選択コマ.png in Resources */,
 				4189959627A0429000ADEFA9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,8 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4189959327A0429000ADEFA9 /* ViewController.swift in Sources */,
+				418995C527A1482900ADEFA9 /* TimerViewController.swift in Sources */,
 				4189958F27A0429000ADEFA9 /* AppDelegate.swift in Sources */,
+				418995C127A043C400ADEFA9 /* SelectViewController.swift in Sources */,
+				418995C327A136A000ADEFA9 /* PickerViewController.swift in Sources */,
 				4189959127A0429000ADEFA9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

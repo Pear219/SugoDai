@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="2765.217391304348" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Picker View Controller-->
         <scene sceneID="eqc-aa-6y7">
             <objects>
-                <viewController id="6l5-C0-l7e" sceneMemberID="viewController">
+                <viewController id="6l5-C0-l7e" customClass="PickerViewController" customModule="SugoDai" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i8L-3s-aWI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,11 +80,40 @@
                         <viewLayoutGuide key="safeArea" id="WCy-g4-lVa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="WCk-9V-Oek"/>
+                    <navigationItem key="navigationItem" id="WCk-9V-Oek">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="AfC-cT-Foc">
+                            <connections>
+                                <action selector="SavePicker" destination="6l5-C0-l7e" id="AbE-j7-CYU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yrt-C0-bpW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3534.7826086956525" y="93.75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Vn0-Gh-5wL">
+            <objects>
+                <viewController id="EFN-Oy-RE0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gsO-bz-DlT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IdH-Iq-xKS" customClass="MBCircularProgressBarView">
+                                <rect key="frame" x="57" y="254" width="300" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="flC-iE-SR2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8sd-tj-gkz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qg9-eO-t6o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4356.521739130435" y="93.75"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dcZ-1m-kW5">
@@ -92,6 +121,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="0b5-2P-iMk" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="M76-k8-TPb">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
