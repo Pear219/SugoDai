@@ -18,6 +18,9 @@
 		418995C127A043C400ADEFA9 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418995C027A043C400ADEFA9 /* SelectViewController.swift */; };
 		418995C327A136A000ADEFA9 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418995C227A136A000ADEFA9 /* PickerViewController.swift */; };
 		418995C527A1482900ADEFA9 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418995C427A1482900ADEFA9 /* TimerViewController.swift */; };
+		418995C727A690B100ADEFA9 /* コマ.png in Resources */ = {isa = PBXBuildFile; fileRef = 418995C627A690B000ADEFA9 /* コマ.png */; };
+		418995C927A6936A00ADEFA9 /* 通路.png in Resources */ = {isa = PBXBuildFile; fileRef = 418995C827A6936A00ADEFA9 /* 通路.png */; };
+		418995CB27A6940000ADEFA9 /* 縦.png in Resources */ = {isa = PBXBuildFile; fileRef = 418995CA27A6940000ADEFA9 /* 縦.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		418995C027A043C400ADEFA9 /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
 		418995C227A136A000ADEFA9 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		418995C427A1482900ADEFA9 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		418995C627A690B000ADEFA9 /* コマ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "コマ.png"; sourceTree = "<group>"; };
+		418995C827A6936A00ADEFA9 /* 通路.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "通路.png"; sourceTree = "<group>"; };
+		418995CA27A6940000ADEFA9 /* 縦.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "縦.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,9 @@
 		4189958227A0429000ADEFA9 = {
 			isa = PBXGroup;
 			children = (
+				418995CA27A6940000ADEFA9 /* 縦.png */,
+				418995C827A6936A00ADEFA9 /* 通路.png */,
+				418995C627A690B000ADEFA9 /* コマ.png */,
 				418995BE27A0430F00ADEFA9 /* 選択コマ.png */,
 				4189958D27A0429000ADEFA9 /* SugoDai */,
 				418995A427A0429200ADEFA9 /* SugoDaiTests */,
@@ -240,10 +249,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				418995C927A6936A00ADEFA9 /* 通路.png in Resources */,
+				418995C727A690B100ADEFA9 /* コマ.png in Resources */,
 				4189959B27A0429200ADEFA9 /* LaunchScreen.storyboard in Resources */,
 				4189959827A0429200ADEFA9 /* Assets.xcassets in Resources */,
 				418995BF27A0430F00ADEFA9 /* 選択コマ.png in Resources */,
 				4189959627A0429000ADEFA9 /* Main.storyboard in Resources */,
+				418995CB27A6940000ADEFA9 /* 縦.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

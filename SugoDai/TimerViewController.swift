@@ -8,13 +8,34 @@
 import UIKit
 
 class TimerViewController: UIViewController {
+    
+    @IBOutlet var jikan: UILabel!
+    @IBOutlet var hunn: UILabel!
+    
+    @IBOutlet var start: UILabel!
+    
+    var str = ""
+    var strr = ""
 
     override func viewDidLoad() {
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        jikan.text = str
+        
+        hunn.text = strr
+        
+        start.text = "START"
+
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func timer() {
+        
+    }
 
     /*
     // MARK: - Navigation
