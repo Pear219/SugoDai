@@ -25,7 +25,7 @@ class TimerViewController: UIViewController {
         
         hunn.text = strr
         
-        start.text = "START"
+        
 
         
         super.viewDidLoad()
