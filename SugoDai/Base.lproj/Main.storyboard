@@ -132,6 +132,9 @@
                                 <rect key="frame" x="129" y="440" width="157" height="162"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="選択コマ.png"/>
+                                <connections>
+                                    <action selector="timerr" destination="EFN-Oy-RE0" eventType="touchUpInside" id="6fO-kM-OLj"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="STOP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYl-jZ-kAE">
                                 <rect key="frame" x="136" y="497" width="141" height="48"/>
@@ -184,135 +187,105 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="通路.png" translatesAutoresizingMaskIntoConstraints="NO" id="VEi-sK-eEG">
-                                <rect key="frame" x="67" y="223" width="280" height="3"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="縦.png" translatesAutoresizingMaskIntoConstraints="NO" id="g9s-aO-29S">
+                                <rect key="frame" x="326" y="426" width="3" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="縦.png" translatesAutoresizingMaskIntoConstraints="NO" id="Beh-jD-3AJ">
-                                <rect key="frame" x="80" y="470" width="3" height="116"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="通路.png" translatesAutoresizingMaskIntoConstraints="NO" id="VEi-sK-eEG">
+                                <rect key="frame" x="86" y="251" width="228" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="縦.png" translatesAutoresizingMaskIntoConstraints="NO" id="fj7-fV-5l7">
-                                <rect key="frame" x="331" y="134" width="3" height="116"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="縦.png" translatesAutoresizingMaskIntoConstraints="NO" id="Beh-jD-3AJ">
+                                <rect key="frame" x="86" y="576" width="3" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="縦.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ln0-ru-RPg">
-                                <rect key="frame" x="80" y="268" width="3" height="116"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="縦.png" translatesAutoresizingMaskIntoConstraints="NO" id="fj7-fV-5l7">
+                                <rect key="frame" x="324" y="110" width="3" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="縦.png" translatesAutoresizingMaskIntoConstraints="NO" id="g9s-aO-29S">
-                                <rect key="frame" x="331" y="343" width="3" height="116"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="縦.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ln0-ru-RPg">
+                                <rect key="frame" x="86" y="285" width="3" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="通路.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wpe-cp-1tF">
-                                <rect key="frame" x="93" y="114" width="228" height="3"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="通路.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wpe-cp-1tF">
+                                <rect key="frame" x="93" y="123" width="228" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="通路.png" translatesAutoresizingMaskIntoConstraints="NO" id="YU5-c8-Z5n">
-                                <rect key="frame" x="73" y="345" width="280" height="3"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="通路.png" translatesAutoresizingMaskIntoConstraints="NO" id="YU5-c8-Z5n">
+                                <rect key="frame" x="99" y="398" width="228" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="通路.png" translatesAutoresizingMaskIntoConstraints="NO" id="8Yj-Yr-CWO">
-                                <rect key="frame" x="67" y="468" width="280" height="3"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="通路.png" translatesAutoresizingMaskIntoConstraints="NO" id="8Yj-Yr-CWO">
+                                <rect key="frame" x="99" y="539" width="228" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="通路.png" translatesAutoresizingMaskIntoConstraints="NO" id="QKF-OL-WbC">
-                                <rect key="frame" x="93" y="590" width="228" height="3"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="通路.png" translatesAutoresizingMaskIntoConstraints="NO" id="QKF-OL-WbC">
+                                <rect key="frame" x="93" y="689" width="228" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="YQt-Ek-5Qp">
-                                <rect key="frame" x="63" y="64" width="80" height="80"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="YQt-Ek-5Qp">
+                                <rect key="frame" x="47" y="84" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="qXz-K4-zlS">
-                                <rect key="frame" x="167" y="64" width="80" height="80"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="qXz-K4-zlS">
+                                <rect key="frame" x="167" y="84" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wrb-si-YWL">
-                                <rect key="frame" x="167" y="184" width="80" height="80"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wrb-si-YWL">
+                                <rect key="frame" x="167" y="212" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="JL6-h3-ESq">
-                                <rect key="frame" x="271" y="184" width="80" height="80"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="JL6-h3-ESq">
+                                <rect key="frame" x="285" y="212" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="9mW-RY-y9j">
-                                <rect key="frame" x="63" y="184" width="80" height="80"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="9mW-RY-y9j">
+                                <rect key="frame" x="47" y="212" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="FO4-dZ-Yfz">
-                                <rect key="frame" x="63" y="304" width="80" height="80"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="FO4-dZ-Yfz">
+                                <rect key="frame" x="47" y="359" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="e9p-8e-vz2">
-                                <rect key="frame" x="167" y="304" width="80" height="80"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="e9p-8e-vz2">
+                                <rect key="frame" x="167" y="359" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="Lwk-mm-6f2">
-                                <rect key="frame" x="271" y="304" width="80" height="80"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="Lwk-mm-6f2">
+                                <rect key="frame" x="287" y="359" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="wIx-nD-qta">
-                                <rect key="frame" x="167" y="424" width="80" height="80"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="wIx-nD-qta">
+                                <rect key="frame" x="167" y="500" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pb4-SA-EX2">
-                                <rect key="frame" x="63" y="424" width="80" height="80"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pb4-SA-EX2">
+                                <rect key="frame" x="47" y="499" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="tI8-91-ecE">
-                                <rect key="frame" x="63" y="544" width="80" height="80"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="tI8-91-ecE">
+                                <rect key="frame" x="47" y="650" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="57m-cF-KIE">
-                                <rect key="frame" x="167" y="544" width="80" height="80"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="57m-cF-KIE">
+                                <rect key="frame" x="167" y="650" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="uFV-Pe-OnE">
-                                <rect key="frame" x="271" y="424" width="80" height="80"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="uFV-Pe-OnE">
+                                <rect key="frame" x="287" y="500" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hkw-4C-GV8">
-                                <rect key="frame" x="271" y="64" width="80" height="80"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hkw-4C-GV8">
+                                <rect key="frame" x="285" y="84" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="uSR-yD-pHa">
-                                <rect key="frame" x="271" y="544" width="80" height="80"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="コマ.png" translatesAutoresizingMaskIntoConstraints="NO" id="uSR-yD-pHa">
+                                <rect key="frame" x="285" y="650" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aDT-l5-SHP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="57m-cF-KIE" firstAttribute="top" secondItem="wIx-nD-qta" secondAttribute="bottom" constant="40" id="2T6-wQ-o95"/>
-                            <constraint firstItem="VEi-sK-eEG" firstAttribute="leading" secondItem="LxE-a7-ALF" secondAttribute="leading" constant="67" id="3Kx-cU-Soa"/>
-                            <constraint firstItem="9mW-RY-y9j" firstAttribute="top" secondItem="YQt-Ek-5Qp" secondAttribute="bottom" constant="40" id="3ur-aQ-jLQ"/>
-                            <constraint firstItem="YU5-c8-Z5n" firstAttribute="top" secondItem="Wrb-si-YWL" secondAttribute="bottom" constant="81" id="58w-i8-DFc"/>
-                            <constraint firstItem="JL6-h3-ESq" firstAttribute="top" secondItem="Hkw-4C-GV8" secondAttribute="bottom" constant="40" id="6OM-Yg-pFb"/>
-                            <constraint firstItem="uFV-Pe-OnE" firstAttribute="top" secondItem="Lwk-mm-6f2" secondAttribute="bottom" constant="40" id="6cX-MF-jZv"/>
-                            <constraint firstAttribute="trailing" secondItem="8Yj-Yr-CWO" secondAttribute="trailing" constant="67" id="6jF-n1-sNO"/>
-                            <constraint firstItem="e9p-8e-vz2" firstAttribute="centerX" secondItem="LxE-a7-ALF" secondAttribute="centerX" id="7Jf-k1-nmT"/>
-                            <constraint firstItem="Ln0-ru-RPg" firstAttribute="leading" secondItem="aDT-l5-SHP" secondAttribute="leading" constant="80" id="8Ti-Ta-0al"/>
-                            <constraint firstItem="QKF-OL-WbC" firstAttribute="top" secondItem="Beh-jD-3AJ" secondAttribute="bottom" constant="4" id="96F-Io-Ne6"/>
-                            <constraint firstItem="e9p-8e-vz2" firstAttribute="leading" secondItem="FO4-dZ-Yfz" secondAttribute="trailing" constant="24" id="BdH-nY-YJy"/>
-                            <constraint firstItem="QKF-OL-WbC" firstAttribute="centerX" secondItem="LxE-a7-ALF" secondAttribute="centerX" id="CIO-Vl-1g1"/>
-                            <constraint firstItem="g9s-aO-29S" firstAttribute="top" secondItem="JL6-h3-ESq" secondAttribute="bottom" constant="79" id="EIs-0U-qfo"/>
-                            <constraint firstItem="QKF-OL-WbC" firstAttribute="leading" secondItem="LxE-a7-ALF" secondAttribute="leading" constant="93" id="EMg-hl-pnt"/>
-                            <constraint firstItem="YQt-Ek-5Qp" firstAttribute="top" secondItem="aDT-l5-SHP" secondAttribute="top" constant="20" id="F0n-KQ-Yub"/>
-                            <constraint firstItem="aDT-l5-SHP" firstAttribute="trailing" secondItem="g9s-aO-29S" secondAttribute="trailing" constant="80" id="GYi-KZ-lk5"/>
-                            <constraint firstItem="57m-cF-KIE" firstAttribute="leading" secondItem="tI8-91-ecE" secondAttribute="trailing" constant="24" id="KcK-fe-j2F"/>
-                            <constraint firstItem="Beh-jD-3AJ" firstAttribute="top" secondItem="FO4-dZ-Yfz" secondAttribute="bottom" constant="86" id="Lld-Jx-QsN"/>
-                            <constraint firstItem="Beh-jD-3AJ" firstAttribute="leading" secondItem="aDT-l5-SHP" secondAttribute="leading" constant="80" id="M56-Eg-1xu"/>
-                            <constraint firstItem="qXz-K4-zlS" firstAttribute="centerX" secondItem="LxE-a7-ALF" secondAttribute="centerX" id="M7Y-DY-qLa"/>
-                            <constraint firstItem="Hkw-4C-GV8" firstAttribute="top" secondItem="aDT-l5-SHP" secondAttribute="top" constant="20" id="NbF-8U-eJk"/>
-                            <constraint firstItem="Ln0-ru-RPg" firstAttribute="top" secondItem="LxE-a7-ALF" secondAttribute="topMargin" constant="224" id="OOQ-O2-lgy"/>
-                            <constraint firstItem="8Yj-Yr-CWO" firstAttribute="top" secondItem="g9s-aO-29S" secondAttribute="bottom" constant="9" id="Pwl-gS-qpj"/>
-                            <constraint firstItem="tI8-91-ecE" firstAttribute="top" secondItem="Pb4-SA-EX2" secondAttribute="bottom" constant="40" id="QYq-sH-Y8o"/>
-                            <constraint firstItem="JL6-h3-ESq" firstAttribute="leading" secondItem="Wrb-si-YWL" secondAttribute="trailing" constant="24" id="Qfs-sR-BzK"/>
-                            <constraint firstItem="Wrb-si-YWL" firstAttribute="centerX" secondItem="LxE-a7-ALF" secondAttribute="centerX" id="R0a-dU-Q6P"/>
-                            <constraint firstItem="Pb4-SA-EX2" firstAttribute="top" secondItem="FO4-dZ-Yfz" secondAttribute="bottom" constant="40" id="Rkk-RP-DWH"/>
-                            <constraint firstItem="uSR-yD-pHa" firstAttribute="leading" secondItem="57m-cF-KIE" secondAttribute="trailing" constant="24" id="S6T-Vw-01O"/>
-                            <constraint firstItem="e9p-8e-vz2" firstAttribute="top" secondItem="Wrb-si-YWL" secondAttribute="bottom" constant="40" id="Svz-3j-qnI"/>
-                            <constraint firstItem="8Yj-Yr-CWO" firstAttribute="leading" secondItem="LxE-a7-ALF" secondAttribute="leading" constant="67" id="Ue4-KU-Nh1"/>
-                            <constraint firstItem="Wrb-si-YWL" firstAttribute="top" secondItem="qXz-K4-zlS" secondAttribute="bottom" constant="40" id="VY6-YQ-x9M"/>
-                            <constraint firstItem="57m-cF-KIE" firstAttribute="centerX" secondItem="LxE-a7-ALF" secondAttribute="centerX" id="Vh9-VI-aon"/>
-                            <constraint firstItem="FO4-dZ-Yfz" firstAttribute="top" secondItem="9mW-RY-y9j" secondAttribute="bottom" constant="40" id="YtB-i6-X2p"/>
-                            <constraint firstItem="Lwk-mm-6f2" firstAttribute="top" secondItem="JL6-h3-ESq" secondAttribute="bottom" constant="40" id="aXY-f4-XAT"/>
-                            <constraint firstItem="aDT-l5-SHP" firstAttribute="trailing" secondItem="fj7-fV-5l7" secondAttribute="trailing" constant="80" id="afM-TD-sxW"/>
-                            <constraint firstItem="uSR-yD-pHa" firstAttribute="top" secondItem="uFV-Pe-OnE" secondAttribute="bottom" constant="40" id="ban-3A-dli"/>
-                            <constraint firstItem="qXz-K4-zlS" firstAttribute="leading" secondItem="YQt-Ek-5Qp" secondAttribute="trailing" constant="24" id="bqR-ce-BvN"/>
-                            <constraint firstItem="qXz-K4-zlS" firstAttribute="top" secondItem="aDT-l5-SHP" secondAttribute="top" constant="20" id="eI5-ih-s7l"/>
-                            <constraint firstItem="Lwk-mm-6f2" firstAttribute="leading" secondItem="e9p-8e-vz2" secondAttribute="trailing" constant="24" id="ebI-dY-bEl"/>
-                            <constraint firstItem="Hkw-4C-GV8" firstAttribute="leading" secondItem="qXz-K4-zlS" secondAttribute="trailing" constant="24" id="erq-5G-Df5"/>
-                            <constraint firstItem="YU5-c8-Z5n" firstAttribute="leading" secondItem="LxE-a7-ALF" secondAttribute="leading" constant="73" id="g8O-CA-cse"/>
-                            <constraint firstAttribute="trailing" secondItem="YU5-c8-Z5n" secondAttribute="trailing" constant="61" id="gx3-2C-GWi"/>
-                            <constraint firstItem="fj7-fV-5l7" firstAttribute="top" secondItem="aDT-l5-SHP" secondAttribute="top" constant="90" id="jvA-bt-W1k"/>
-                            <constraint firstItem="Wpe-cp-1tF" firstAttribute="top" secondItem="aDT-l5-SHP" secondAttribute="top" constant="70" id="kki-6S-1c6"/>
-                            <constraint firstItem="uFV-Pe-OnE" firstAttribute="leading" secondItem="wIx-nD-qta" secondAttribute="trailing" constant="24" id="o3d-5h-g1u"/>
-                            <constraint firstItem="VEi-sK-eEG" firstAttribute="top" secondItem="YQt-Ek-5Qp" secondAttribute="bottom" constant="79" id="oWA-op-xRd"/>
-                            <constraint firstItem="Wrb-si-YWL" firstAttribute="leading" secondItem="9mW-RY-y9j" secondAttribute="trailing" constant="24" id="pEP-O9-tAk"/>
-                            <constraint firstItem="Wpe-cp-1tF" firstAttribute="centerX" secondItem="LxE-a7-ALF" secondAttribute="centerX" id="v0H-qx-Sbx"/>
-                            <constraint firstAttribute="trailing" secondItem="VEi-sK-eEG" secondAttribute="trailing" constant="67" id="w3r-Cr-gG4"/>
-                            <constraint firstItem="wIx-nD-qta" firstAttribute="leading" secondItem="Pb4-SA-EX2" secondAttribute="trailing" constant="24" id="x2G-Kw-5m3"/>
-                            <constraint firstItem="wIx-nD-qta" firstAttribute="centerX" secondItem="LxE-a7-ALF" secondAttribute="centerX" id="xYh-iv-KOL"/>
-                            <constraint firstItem="wIx-nD-qta" firstAttribute="top" secondItem="e9p-8e-vz2" secondAttribute="bottom" constant="40" id="yqZ-LA-1Ng"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="6FV-Qk-j69"/>
                 </viewController>
