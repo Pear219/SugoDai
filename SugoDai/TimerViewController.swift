@@ -34,6 +34,9 @@ class TimerViewController: UIViewController {
         
         hunn.text = strr
         
+        count1 =  Int(str)
+        count2 = Int(strr)
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -65,8 +68,6 @@ class TimerViewController: UIViewController {
     }
     
     @objc func down() {
-        count1 =  Int(str)
-        count2 = Int(strr)
         if count2 > 0  { ///秒が0じゃなかった(例：1とか2とか)
             count2 = count2 - 1
             hunn.text = String(count2)
