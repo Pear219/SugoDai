@@ -714,9 +714,6 @@
                         <outlet property="Koma25" destination="Nfm-s1-T0f" id="sHn-z2-PXe"/>
                         <outlet property="Koma26" destination="1id-iU-Sud" id="2ZT-jY-odt"/>
                         <outlet property="Koma27" destination="6ga-PI-NEY" id="M24-7f-gM7"/>
-                        <outlet property="Koma28" destination="Iba-VM-8IY" id="wn7-y9-5cy"/>
-                        <outlet property="Koma29" destination="vgy-vm-FS3" id="tIH-Eq-Lch"/>
-                        <outlet property="Koma30" destination="SfC-7X-kG6" id="DzO-LC-B88"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BtD-fG-DQa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
