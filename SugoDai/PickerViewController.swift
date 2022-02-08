@@ -11,10 +11,6 @@ class PickerViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var TextField: UITextField!
     @IBOutlet var TextField1: UITextField!
-    
-    var str: Int!
-    
-    var strr: Int!
 
     override func viewDidLoad() {
         

@@ -14,6 +14,8 @@ class TimerViewController: UIViewController {
     
     @IBOutlet var start: UILabel!
     
+    @IBOutlet var end: UILabel!
+    
     var str = ""
     
     var strr = ""
@@ -37,6 +39,7 @@ class TimerViewController: UIViewController {
         count1 =  Int(str)
         count2 = Int(strr)
         
+        end.isHidden = true
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -72,9 +75,15 @@ class TimerViewController: UIViewController {
             count2 = count2 - 1
             hunn.text = String(count2)
         }  else if count2 == 0 {  ///秒がきっちり0になった
-            if count1 == 0 {  ///秒も分も両方とも0になった時
+            if count1 == 0 {///秒も分も両方とも0になった時
+                timer.invalidate()
                 hunn.text = String(count2)
                 jikan.text = String(count1)
+                end.isHidden = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Koma1") as! Koma1ViewController
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
             } else if count1 > 0 { ///秒が0になったが、分の方はまだ０になっていない場合
                 count1 = count1 - 1
                 count2 = 59
@@ -82,10 +91,5 @@ class TimerViewController: UIViewController {
                 jikan.text = String(count1)
             }
         }
-        
-    }
-        
-
-   
-
+    }    
 }
