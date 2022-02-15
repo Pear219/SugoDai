@@ -67,7 +67,7 @@
         <!--Item-->
         <scene sceneID="4hX-5f-tZh">
             <objects>
-                <viewController id="XBl-Es-Wmu" customClass="SelectViewController" customModule="SugoDai" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XBl-Es-Wmu" customClass="SetteiViewController" customModule="SugoDai" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XY9-bC-Gsn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,10 +119,8 @@
                     <tabBarItem key="tabBarItem" title="Item" id="Aq5-dk-Y7t"/>
                     <navigationItem key="navigationItem" id="bzz-zd-Q4W"/>
                     <connections>
-                        <outlet property="Button1" destination="CY8-ON-qvf" id="yHP-AN-o8v"/>
-                        <outlet property="Button2" destination="FTm-UH-SIJ" id="6WA-NA-G5o"/>
-                        <outlet property="Button3" destination="FS4-CL-3tR" id="bbW-Rn-G7E"/>
-                        <outlet property="Button4" destination="KVl-lG-TNV" id="SAQ-9f-6l4"/>
+                        <outlet property="Settei1" destination="CY8-ON-qvf" id="4PF-e9-2mv"/>
+                        <outlet property="Settei2" destination="FTm-UH-SIJ" id="Ho6-Vn-lUz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oiv-RJ-gcu" sceneMemberID="firstResponder"/>
@@ -183,10 +181,10 @@
             </objects>
             <point key="canvasLocation" x="944.92753623188412" y="2362.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Select View Controller-->
         <scene sceneID="NCK-Hq-bZg">
             <objects>
-                <viewController id="ald-xZ-Xlg" sceneMemberID="viewController">
+                <viewController id="ald-xZ-Xlg" customClass="SelectViewController" customModule="SugoDai" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5gw-ej-y59">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -227,8 +225,8 @@
                                             <segue destination="oHv-iz-Wfb" kind="show" id="YTo-ip-uV2"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="どれを編集しましたか" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1j3-gC-4K4">
-                                        <rect key="frame" x="120" y="166" width="174" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="どれを編集しますか？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1j3-gC-4K4">
+                                        <rect key="frame" x="121" y="166" width="174" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -248,10 +246,10 @@
             </objects>
             <point key="canvasLocation" x="1855" y="1602"/>
         </scene>
-        <!--View Controller-->
+        <!--Hensyu Text View Controller-->
         <scene sceneID="Maa-QL-7yu">
             <objects>
-                <viewController id="oHv-iz-Wfb" sceneMemberID="viewController">
+                <viewController id="oHv-iz-Wfb" customClass="HensyuTextViewController" customModule="SugoDai" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yMY-6h-4br">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -278,6 +276,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="HensyuTextView" destination="XOB-BF-epn" id="ZTP-jX-bBs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cC3-iU-lWb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -714,6 +715,9 @@
                         <outlet property="Koma25" destination="Nfm-s1-T0f" id="sHn-z2-PXe"/>
                         <outlet property="Koma26" destination="1id-iU-Sud" id="2ZT-jY-odt"/>
                         <outlet property="Koma27" destination="6ga-PI-NEY" id="M24-7f-gM7"/>
+                        <outlet property="Koma28" destination="Iba-VM-8IY" id="51G-zJ-uvh"/>
+                        <outlet property="Koma29" destination="vgy-vm-FS3" id="L69-ui-JsY"/>
+                        <outlet property="Koma30" destination="SfC-7X-kG6" id="GkD-a5-hjf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BtD-fG-DQa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -723,7 +727,7 @@
         <!--Item-->
         <scene sceneID="BCr-Xf-b50">
             <objects>
-                <viewController id="WX6-Z3-fjL" customClass="Koma2ViewController" customModule="SugoDai" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WX6-Z3-fjL" customClass="Koma3ViewController" customModule="SugoDai" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VBs-as-Qpg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -830,21 +834,21 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="6hq-B2-9kU"/>
                     <connections>
-                        <outlet property="Koma1" destination="1qw-pF-ze5" id="14Q-31-8ut"/>
-                        <outlet property="Koma10" destination="YbH-l1-eHD" id="SHF-ZY-qyN"/>
-                        <outlet property="Koma11" destination="FZw-mn-eJ9" id="hFS-wQ-fra"/>
-                        <outlet property="Koma12" destination="z0o-lz-0aN" id="b4b-Dl-hwu"/>
-                        <outlet property="Koma13" destination="LFY-sT-su4" id="xV7-Jp-tcp"/>
-                        <outlet property="Koma14" destination="9sg-oM-Zed" id="i8J-e7-u7L"/>
-                        <outlet property="Koma15" destination="zeN-kY-qZ8" id="ubU-21-s2M"/>
-                        <outlet property="Koma2" destination="fGs-03-rIK" id="aUq-19-QV8"/>
-                        <outlet property="Koma3" destination="Sxz-OB-e8a" id="dGd-AN-KIO"/>
-                        <outlet property="Koma4" destination="Fct-ag-Dli" id="Y5i-Nr-8u1"/>
-                        <outlet property="Koma5" destination="mzr-sa-1JU" id="K2M-Iu-Pcs"/>
-                        <outlet property="Koma6" destination="cEg-Ny-Xc4" id="2oJ-Ve-tWf"/>
-                        <outlet property="Koma7" destination="Ge3-cy-l8d" id="Mzd-aE-nFZ"/>
-                        <outlet property="Koma8" destination="eCI-AX-k7e" id="Dil-u9-qev"/>
-                        <outlet property="Koma9" destination="ZP0-8d-w2k" id="lMG-jK-7OM"/>
+                        <outlet property="Koma31" destination="1qw-pF-ze5" id="bRo-ZS-Omx"/>
+                        <outlet property="Koma32" destination="fGs-03-rIK" id="tW7-3q-o7f"/>
+                        <outlet property="Koma33" destination="Sxz-OB-e8a" id="Ksm-xp-5Pq"/>
+                        <outlet property="Koma34" destination="Fct-ag-Dli" id="HzG-qv-Msp"/>
+                        <outlet property="Koma35" destination="mzr-sa-1JU" id="Ejh-G7-A33"/>
+                        <outlet property="Koma36" destination="cEg-Ny-Xc4" id="gRO-xz-Jwh"/>
+                        <outlet property="Koma37" destination="Ge3-cy-l8d" id="XGJ-JA-OEB"/>
+                        <outlet property="Koma38" destination="eCI-AX-k7e" id="i9H-7V-2CP"/>
+                        <outlet property="Koma39" destination="ZP0-8d-w2k" id="fn6-Ur-izh"/>
+                        <outlet property="Koma40" destination="YbH-l1-eHD" id="YVs-U5-ZPI"/>
+                        <outlet property="Koma41" destination="FZw-mn-eJ9" id="C6E-C3-iWE"/>
+                        <outlet property="Koma42" destination="z0o-lz-0aN" id="JeW-ru-11H"/>
+                        <outlet property="Koma43" destination="LFY-sT-su4" id="ube-Jh-5dg"/>
+                        <outlet property="Koma44" destination="9sg-oM-Zed" id="gHo-XK-6P2"/>
+                        <outlet property="Koma45" destination="zeN-kY-qZ8" id="qdt-Va-qHp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EWT-yA-D8g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -854,7 +858,7 @@
         <!--Item-->
         <scene sceneID="QcT-St-0Mt">
             <objects>
-                <viewController id="iDn-ej-P78" customClass="Koma2ViewController" customModule="SugoDai" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iDn-ej-P78" customClass="Koma5ViewController" customModule="SugoDai" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UEW-t5-y9u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -961,21 +965,21 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Lj9-sJ-xv6"/>
                     <connections>
-                        <outlet property="Koma1" destination="F4g-57-LiS" id="5Fg-A1-hc1"/>
-                        <outlet property="Koma10" destination="hA7-Dt-7PS" id="0CI-eS-47J"/>
-                        <outlet property="Koma11" destination="aYU-wS-ttt" id="PdP-Vh-qRn"/>
-                        <outlet property="Koma12" destination="wEn-Fn-9pW" id="96n-xD-Ljw"/>
-                        <outlet property="Koma13" destination="Zsh-7S-Tni" id="0vS-G6-Eil"/>
-                        <outlet property="Koma14" destination="aHl-UB-eDq" id="Xka-Y5-eq0"/>
-                        <outlet property="Koma15" destination="HEp-tC-3my" id="Wov-Gm-kBY"/>
-                        <outlet property="Koma2" destination="1bS-W5-9Bc" id="DSk-qY-xWt"/>
-                        <outlet property="Koma3" destination="nk7-HU-Lg0" id="7J3-hA-kgr"/>
-                        <outlet property="Koma4" destination="7vj-kH-St7" id="8Mb-RX-X83"/>
-                        <outlet property="Koma5" destination="hWq-wY-k02" id="bef-Qh-PuJ"/>
-                        <outlet property="Koma6" destination="vqA-dr-OU4" id="SBb-0T-QtG"/>
-                        <outlet property="Koma7" destination="t8x-h3-KHh" id="wVk-53-XeD"/>
-                        <outlet property="Koma8" destination="D5c-SQ-STQ" id="WRk-hG-hOJ"/>
-                        <outlet property="Koma9" destination="L7o-B9-1RI" id="YdC-Sh-d9Z"/>
+                        <outlet property="Koma61" destination="F4g-57-LiS" id="TRR-uv-8Nk"/>
+                        <outlet property="Koma62" destination="1bS-W5-9Bc" id="Kh0-SU-DnR"/>
+                        <outlet property="Koma63" destination="nk7-HU-Lg0" id="Jks-ff-RX3"/>
+                        <outlet property="Koma64" destination="7vj-kH-St7" id="M7K-JA-NmY"/>
+                        <outlet property="Koma65" destination="hWq-wY-k02" id="m7G-rT-hMe"/>
+                        <outlet property="Koma66" destination="vqA-dr-OU4" id="JJW-fU-Iwl"/>
+                        <outlet property="Koma67" destination="t8x-h3-KHh" id="Idd-0Z-amR"/>
+                        <outlet property="Koma68" destination="D5c-SQ-STQ" id="LtZ-0B-Whs"/>
+                        <outlet property="Koma69" destination="L7o-B9-1RI" id="cES-cH-299"/>
+                        <outlet property="Koma70" destination="hA7-Dt-7PS" id="LLp-fg-Jmm"/>
+                        <outlet property="Koma71" destination="aYU-wS-ttt" id="Asw-if-Ewh"/>
+                        <outlet property="Koma72" destination="wEn-Fn-9pW" id="e2c-Kc-Aw6"/>
+                        <outlet property="Koma73" destination="Zsh-7S-Tni" id="Rl4-aS-DBH"/>
+                        <outlet property="Koma74" destination="aHl-UB-eDq" id="WjL-ep-9e4"/>
+                        <outlet property="Koma75" destination="HEp-tC-3my" id="wC9-CB-6ca"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="svS-WG-WCg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -985,7 +989,7 @@
         <!--Item-->
         <scene sceneID="CBD-eM-OEW">
             <objects>
-                <viewController id="rfw-qs-kOw" customClass="Koma2ViewController" customModule="SugoDai" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rfw-qs-kOw" customClass="Koma4ViewController" customModule="SugoDai" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6zi-dR-vPu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1092,21 +1096,21 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="4Nl-hY-7K3"/>
                     <connections>
-                        <outlet property="Koma1" destination="XlT-HB-ux7" id="pcp-kq-xrR"/>
-                        <outlet property="Koma10" destination="UAq-wc-eNw" id="5W7-iW-ocO"/>
-                        <outlet property="Koma11" destination="KEW-BG-lA1" id="Z6g-M7-umD"/>
-                        <outlet property="Koma12" destination="cKe-bp-4OF" id="oZd-FS-mnZ"/>
-                        <outlet property="Koma13" destination="7yA-UM-JqC" id="pk1-rM-J7m"/>
-                        <outlet property="Koma14" destination="OEL-4z-PK2" id="9xo-s2-Rrf"/>
-                        <outlet property="Koma15" destination="Svc-sW-k2e" id="QMJ-cz-T2p"/>
-                        <outlet property="Koma2" destination="14B-y1-Wia" id="8KQ-dO-01V"/>
-                        <outlet property="Koma3" destination="Kog-sR-Cfc" id="XEh-9c-1eB"/>
-                        <outlet property="Koma4" destination="6a5-6N-YZZ" id="RMn-11-8iA"/>
-                        <outlet property="Koma5" destination="qgs-th-Pzc" id="3l0-dg-Mfz"/>
-                        <outlet property="Koma6" destination="0F2-0c-4dW" id="fgP-fY-pfy"/>
-                        <outlet property="Koma7" destination="SFu-KF-Awr" id="Qql-8q-JHa"/>
-                        <outlet property="Koma8" destination="kfX-Ys-cHl" id="B0p-kn-SBO"/>
-                        <outlet property="Koma9" destination="6uC-ZH-WsQ" id="gS5-gd-5iK"/>
+                        <outlet property="Koma46" destination="XlT-HB-ux7" id="IKJ-ER-SOm"/>
+                        <outlet property="Koma47" destination="14B-y1-Wia" id="Rdb-ZV-3Ds"/>
+                        <outlet property="Koma48" destination="Kog-sR-Cfc" id="7rX-DH-nyW"/>
+                        <outlet property="Koma49" destination="6a5-6N-YZZ" id="qAe-1Q-RIY"/>
+                        <outlet property="Koma50" destination="qgs-th-Pzc" id="m8g-8P-8mH"/>
+                        <outlet property="Koma51" destination="0F2-0c-4dW" id="lsq-nK-dX0"/>
+                        <outlet property="Koma52" destination="SFu-KF-Awr" id="bKY-kz-jfy"/>
+                        <outlet property="Koma53" destination="kfX-Ys-cHl" id="hKA-pK-RZ7"/>
+                        <outlet property="Koma54" destination="6uC-ZH-WsQ" id="THM-p8-HXw"/>
+                        <outlet property="Koma55" destination="UAq-wc-eNw" id="s4r-h6-l3B"/>
+                        <outlet property="Koma56" destination="KEW-BG-lA1" id="uzb-Ni-sja"/>
+                        <outlet property="Koma57" destination="cKe-bp-4OF" id="dFO-Az-RqK"/>
+                        <outlet property="Koma58" destination="7yA-UM-JqC" id="mf1-fU-Kkh"/>
+                        <outlet property="Koma59" destination="OEL-4z-PK2" id="Awp-1h-Pa4"/>
+                        <outlet property="Koma60" destination="Svc-sW-k2e" id="yRI-g6-NCS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZUa-Vu-vl1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1155,7 +1159,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="QYC-cS-ofV"/>
-        <segue reference="pa2-iL-LfZ"/>
+        <segue reference="kvY-tK-U6f"/>
         <segue reference="2Gv-wz-qPh"/>
     </inferredMetricsTieBreakers>
     <resources>

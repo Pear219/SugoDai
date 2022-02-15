@@ -24,12 +24,24 @@ class Koma1ViewController: UIViewController {
     @IBOutlet var Koma13: UIImageView!
     @IBOutlet var Koma14: UIImageView!
     @IBOutlet var Koma15: UIImageView!
+    
+    var timernokoma: UITextView!
+    
+    var saveData: UserDefaults = UserDefaults.standard
+    
+   
 
     override func viewDidLoad() {
+        
+        timernokoma.text = saveData.object(forKey: "timer") as? String
+        
+        
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
+    
+    
+    
     
 
     /*

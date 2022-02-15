@@ -8,6 +8,22 @@
 import UIKit
 
 class Koma3ViewController: UIViewController {
+    
+    @IBOutlet var Koma31: UIImageView!
+    @IBOutlet var Koma32: UIImageView!
+    @IBOutlet var Koma33: UIImageView!
+    @IBOutlet var Koma34: UIImageView!
+    @IBOutlet var Koma35: UIImageView!
+    @IBOutlet var Koma36: UIImageView!
+    @IBOutlet var Koma37: UIImageView!
+    @IBOutlet var Koma38: UIImageView!
+    @IBOutlet var Koma39: UIImageView!
+    @IBOutlet var Koma40: UIImageView!
+    @IBOutlet var Koma41: UIImageView!
+    @IBOutlet var Koma42: UIImageView!
+    @IBOutlet var Koma43: UIImageView!
+    @IBOutlet var Koma44: UIImageView!
+    @IBOutlet var Koma45: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,24 +1,28 @@
 //
-//  SelectViewController.swift
+//  HensyuTextViewController.swift
 //  SugoDai
 //
-//  Created by 加藤 on 2022/01/25.
+//  Created by 加藤 on 2022/02/15.
 //
 
 import UIKit
 
-class SelectViewController: UIViewController {
+class HensyuTextViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet var Button1: UIButton!
-    @IBOutlet var Button2: UIButton!
-    @IBOutlet var Button3: UIButton!
-    @IBOutlet var Button4: UIButton!
+    @IBOutlet var HensyuTextView: UITextField!
 
-    @IBOutlet var label: UILabel!
     override func viewDidLoad() {
+        
+        HensyuTextView.delegate = self
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        HensyuTextView.resignFirstResponder()
+        return true
     }
     
 

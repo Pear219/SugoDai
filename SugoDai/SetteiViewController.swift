@@ -1,20 +1,17 @@
 //
-//  SelectViewController.swift
+//  SetteiViewController.swift
 //  SugoDai
 //
-//  Created by 加藤 on 2022/01/25.
+//  Created by 加藤 on 2022/02/13.
 //
 
 import UIKit
 
-class SelectViewController: UIViewController {
+class SetteiViewController: UIViewController {
     
-    @IBOutlet var Button1: UIButton!
-    @IBOutlet var Button2: UIButton!
-    @IBOutlet var Button3: UIButton!
-    @IBOutlet var Button4: UIButton!
+    @IBOutlet var Settei1: UIButton!
+    @IBOutlet var Settei2: UIButton!
 
-    @IBOutlet var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
