@@ -25,20 +25,20 @@ class Koma1ViewController: UIViewController {
     @IBOutlet var Koma14: UIImageView!
     @IBOutlet var Koma15: UIImageView!
     
-    var timernokoma: UITextView!
+    @IBOutlet var masuuke: UILabel!
     
-    var saveData: UserDefaults = UserDefaults.standard
     
-   
-
     override func viewDidLoad() {
         
-        timernokoma.text = saveData.object(forKey: "timer") as? String
+        masuuke.isHidden = true
         
+        masuuke.text = UserDefaults.standard.string(forKey: "masu")
+
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
     
     
     

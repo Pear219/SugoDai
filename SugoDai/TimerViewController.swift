@@ -25,8 +25,6 @@ class TimerViewController: UIViewController {
     var count2: Int!
     
     var timer: Timer = Timer()
-    
-    var saveData: UserDefaults  = UserDefaults.standard
 
     override func viewDidLoad() {
         
@@ -42,6 +40,7 @@ class TimerViewController: UIViewController {
         count2 = Int(strr)
         
         end.isHidden = true
+    
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -83,9 +82,12 @@ class TimerViewController: UIViewController {
                 jikan.text = String(count1)
                 end.isHidden = false
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                    self.navigationController?.popToRootViewController(animated: true)
-                    saveData.set(hunn.text, forKey: "timer")
-                    //let vc = self.storyboard?.instantiateViewController(withIdentifier: "Koma1") as! Koma1ViewController
+                    UserDefaults.standard.set(self.hunn.text, forKey: "masu")
+                       let nextView = self.storyboard?.instantiateViewController(withIdentifier: "Koma1") as! Koma1ViewController
+                       self.navigationController?.pushViewController(nextView, animated: true)
+                   }
+                    //一時的なコメself.navigationController?.popToRootViewController(animated: true)
+                 //let vc = sef.storyboard?.instantiateViewController(withIdentifier: "Koma1") as! Koma1ViewController
                     //self.navigationController?.pushViewController(vc, animated: true)
                 }
             } else if count1 > 0 { ///秒が0になったが、分の方はまだ０になっていない場合
@@ -96,4 +98,4 @@ class TimerViewController: UIViewController {
             }
         }
     }    
-}
+
