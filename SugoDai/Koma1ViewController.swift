@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Koma1ViewController: UIViewController {
+class Koma1ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet var Koma1: UIImageView!
     @IBOutlet var Koma2: UIImageView!
@@ -25,21 +25,38 @@ class Koma1ViewController: UIViewController {
     @IBOutlet var Koma14: UIImageView!
     @IBOutlet var Koma15: UIImageView!
     
-    @IBOutlet var masuuke: UILabel!
+    let saveData: UserDefaults = UserDefaults.standard
+    
+    var count2: Int!
+    
+    var doko: Int!
+    
+    let nanmasu: UserDefaults = UserDefaults.standard
     
     
     override func viewDidLoad() {
         
-        masuuke.isHidden = true
+        count2 = saveData.object(forKey: "hunn") as? Int
         
-        masuuke.text = UserDefaults.standard.string(forKey: "masu")
-
-        
+        if count2 == 1 {
+            
+        }
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 6
+    }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+        return 3
+    }
     
+    func collectionView(_ collectonView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+   
+}
+
     
     
     
@@ -54,4 +71,4 @@ class Koma1ViewController: UIViewController {
     }
     */
 
-}
+
