@@ -35,7 +35,6 @@ class TimerViewController: UIViewController {
         start.text = "START"
         
         jikan.text = str
-        
         hunn.text = strr
         
         count1 =  Int(str)

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Koma1ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class Koma1ViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource {
     
     @IBOutlet var Koma1: UIImageView!
     @IBOutlet var Koma2: UIImageView!
@@ -33,42 +33,52 @@ class Koma1ViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     let nanmasu: UserDefaults = UserDefaults.standard
     
+    @IBOutlet weak var collection: UICollectionView!
+    
     
     override func viewDidLoad() {
         
-        count2 = saveData.object(forKey: "hunn") as? Int
+        collection.delegate = self
+        collection.dataSource = self
         
-        if count2 == 1 {
-            
-        }
+        //count2 = saveData.object(forKey: "hunn") as? Int
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width:100 , height: 100)
+        layout.sectionInset = UIEdgeInsets(top: 25,left: 15,bottom: 25,right: 15)
+        collection.collectionViewLayout = layout
+        
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 6
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         return 3
     }
     
-    func collectionView(_ collectonView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-   
-}
-
+    //func collectionView(_ collectonView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    //let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
     
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        return cell
     }
-    */
-
-
+    
+    
+    
+    
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+}

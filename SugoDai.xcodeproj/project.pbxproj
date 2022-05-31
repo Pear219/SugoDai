@@ -32,6 +32,7 @@
 		4193676027B8CA29004E3BB0 /* Koma5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4193675F27B8CA29004E3BB0 /* Koma5ViewController.swift */; };
 		4193676227B8CAD2004E3BB0 /* SetteiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4193676127B8CAD2004E3BB0 /* SetteiViewController.swift */; };
 		4193676627BBA51F004E3BB0 /* HensyuTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4193676527BBA51F004E3BB0 /* HensyuTextViewController.swift */; };
+		41C3618D284628780085385A /* 影アリくん.png in Resources */ = {isa = PBXBuildFile; fileRef = 41C3618C284628780085385A /* 影アリくん.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		4193675F27B8CA29004E3BB0 /* Koma5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Koma5ViewController.swift; sourceTree = "<group>"; };
 		4193676127B8CAD2004E3BB0 /* SetteiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetteiViewController.swift; sourceTree = "<group>"; };
 		4193676527BBA51F004E3BB0 /* HensyuTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HensyuTextViewController.swift; sourceTree = "<group>"; };
+		41C3618C284628780085385A /* 影アリくん.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "影アリくん.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				418995CE27AB829B00ADEFA9 /* 通路　長め.png */,
 				418995D027AB839200ADEFA9 /* マス.png */,
 				4193675727B00014004E3BB0 /* コマ影あり.png */,
+				41C3618C284628780085385A /* 影アリくん.png */,
 				4189958D27A0429000ADEFA9 /* SugoDai */,
 				418995A427A0429200ADEFA9 /* SugoDaiTests */,
 				418995AF27A0429200ADEFA9 /* SugoDaiUITests */,
@@ -284,6 +287,7 @@
 			files = (
 				418995C927A6936A00ADEFA9 /* 通路.png in Resources */,
 				418995C727A690B100ADEFA9 /* コマ.png in Resources */,
+				41C3618D284628780085385A /* 影アリくん.png in Resources */,
 				4189959B27A0429200ADEFA9 /* LaunchScreen.storyboard in Resources */,
 				418995D127AB839200ADEFA9 /* マス.png in Resources */,
 				4189959827A0429200ADEFA9 /* Assets.xcassets in Resources */,
