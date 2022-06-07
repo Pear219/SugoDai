@@ -16,6 +16,9 @@ class TimerViewController: UIViewController {
     
     @IBOutlet var end: UILabel!
     
+    @IBOutlet var hunnataiwatasi: UILabel!
+    @IBOutlet var byouataiwatasi: UILabel!
+    
     var str = ""
     
     var strr = ""
@@ -27,7 +30,7 @@ class TimerViewController: UIViewController {
     var timer: Timer = Timer()
     
     let saveData: UserDefaults = UserDefaults.standard
-
+    
     override func viewDidLoad() {
         
         navigationController?.setNavigationBarHidden(true, animated: false)
@@ -36,6 +39,9 @@ class TimerViewController: UIViewController {
         
         jikan.text = str
         hunn.text = strr
+        
+        hunnataiwatasi.text = str
+        byouataiwatasi.text = strr
         
         count1 =  Int(str)
         count2 = Int(strr)
@@ -83,14 +89,30 @@ class TimerViewController: UIViewController {
                 jikan.text = String(count1)
                 end.isHidden = false
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { ///0.5秒待つ
-                    self.navigationController?.popToRootViewController(animated: true)
-                    self.saveData.set(self.count2,forKey: "hunn")
+//                    self.navigationController?.popToRootViewController(animated: true)//navigationの最初の画面に画面遷移
+                    UserDefaults.standard.set(self.hunnataiwatasi.text, forKey: "hunn")
+                        let nextView = self.storyboard?.instantiateViewController(withIdentifier: "Koma1") as! Koma1ViewController
+                    
+                       // self.navigationController?.pushViewController(nextView, animated: true)
+                    //navigationをけして、tabbarしはいかまでいって、うつる！
+                    self.present(nextView, animated: true, completion: nil)
                     }
+
+//                    self.saveData.set(self.count2,forKey: "hunn")
+                            }
+//                saveData.set(str, forKey: "hunn")
+//                saveData.set(strr, forKey: "byou")
+//
+//                print(str);
+//                print(strr)
+//                なぜかうまくいかんやつ
+                
+                
                     //一時的なコメself.navigationController?.popToRootViewController(animated: true)
                  //let vc = sef.storyboard?.instantiateViewController(withIdentifier: "Koma1") as! Koma1ViewController
                     //self.navigationController?.pushViewController(vc, animated: true)
                 }
-            } else if count1 > 0 { ///秒が0になったが、分の方はまだ０になっていない場合
+     else if count1 > 0 { ///秒が0になったが、分の方はまだ０になっていない場合
                 count1 = count1 - 1
                 count2 = 59
                 hunn.text = String(count2)
