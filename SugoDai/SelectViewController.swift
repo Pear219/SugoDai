@@ -13,8 +13,7 @@ class SelectViewController: UIViewController {
     @IBOutlet var Button2: UIButton!
     @IBOutlet var Button3: UIButton!
     @IBOutlet var Button4: UIButton!
-
-    @IBOutlet var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

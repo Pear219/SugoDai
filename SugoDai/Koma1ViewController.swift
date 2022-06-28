@@ -24,19 +24,18 @@ class Koma1ViewController: UIViewController, UICollectionViewDelegate,UICollecti
     @IBOutlet var Koma13: UIImageView!
     @IBOutlet var Koma14: UIImageView!
     @IBOutlet var Koma15: UIImageView!
+    
+    var komasuu: Int = 0
+    
+//    var count2: Int!
+//
+//    var doko: Int!
 
-    var count2: Int!
-    
-    var doko: Int!
-    
-    var byou = ""
-    var hunn = ""
     
     
-//    let saveData: UserDefaults = UserDefaults.standard
+    let saveData: UserDefaults = UserDefaults.standard
     
     @IBOutlet weak var collection: UICollectionView!
-    
     
     override func viewDidLoad() {
 
@@ -50,12 +49,9 @@ class Koma1ViewController: UIViewController, UICollectionViewDelegate,UICollecti
         layout.sectionInset = UIEdgeInsets(top: 25,left: 15,bottom: 25,right: 15)
         collection.collectionViewLayout = layout
         
-//        str = saveData.object(forKey: "hunn") as? Int
-//        strr = saveData.object(forKey: "byou") as? Int
+        komasuu = saveData.object(forKey: "countkoma") as! Int
         
-   
-
-        
+        print(komasuu)
         
         super.viewDidLoad()
         // Do any additional setup after loading the view
