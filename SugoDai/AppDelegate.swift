@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Override point for customization after application launch.Thread 1: "could not dequeue a view of kind: UICollectionElementKindCell with identifier CollectionViewCell - must register a nib or a class for the identifier or connect a prototype cell
         return true
     }
 

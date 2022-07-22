@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Koma1ViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource {
+class Koma1ViewController: UIViewController{
     
     @IBOutlet var Koma1: UIImageView!
     @IBOutlet var Koma2: UIImageView!
@@ -26,7 +26,14 @@ class Koma1ViewController: UIViewController, UICollectionViewDelegate,UICollecti
     @IBOutlet var Koma15: UIImageView!
     
     var komasuu: Int = 0
+    //komasuu=受け取ったやつ
+    var amarinokazu: Int = 0
     
+    var susumukazu: Int = 0
+    
+    var nangyou: Int = 0
+    
+        
 //    var count2: Int!
 //
 //    var doko: Int!
@@ -39,9 +46,9 @@ class Koma1ViewController: UIViewController, UICollectionViewDelegate,UICollecti
     
     override func viewDidLoad() {
 
-        collection.delegate = self
-        collection.dataSource = self
-        
+//        collection.delegate = self
+//        collection.dataSource = self
+//
         //count2 = saveData.object(forKey: "hunn") as? Int
         
         let layout = UICollectionViewFlowLayout()
@@ -50,26 +57,189 @@ class Koma1ViewController: UIViewController, UICollectionViewDelegate,UICollecti
         collection.collectionViewLayout = layout
         
         komasuu = saveData.object(forKey: "countkoma") as! Int
-        
-        print(komasuu)
+        ///komasuuはTimerから値渡しされたもの。現段階ではやった分だけ(○分)だけ進むようになった！！
         
         super.viewDidLoad()
+        collection.register(UINib(nibName: "CollectionCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CollectionViewCell")
         // Do any additional setup after loading the view
     }
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 5
-    }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return 3
-    }
+
     
     //func collectionView(_ collectonView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     //let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
     
-    func collectionView(_ collectionView: UICollectionView,
+//extension Koma1ViewController: UICollectionViewDelegate,UICollectionViewDataSource {
+//        func numberOfSections(in collectionView: UICollectionView) -> Int {
+//            return 5
+//        }
+//
+//        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+//            return 3
+//        }
+//
+//        func collectionView(_ collectionView: UICollectionView,
+//                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionCollectionViewCell
+//
+//        //cell.masu?.image = UIImage(named: "マス")
+//
+//        ///おそらくこれで自分のTableViewの中のCellを呼び出しているIBActionみたいな役割果たしていると思う
+//        ///
+//        susumukazu = komasuu + susumukazu //結果的に進む数
+//        nangyou = susumukazu * 3
+//        amarinokazu = (susumukazu + komasuu) % 3 //あまり
+//        if susumukazu <= 2 {
+//            if susumukazu == 1{
+//                if indexPath.row  == 1 {
+//                    cell.Koma.image = UIImage(named: "マス")
+//                }
+//            } else if susumukazu == 2 {
+//                if indexPath.row == 2 {
+//                    cell.Koma.image = UIImage(named: "マス")
+//                }
+//            }
+//        } else if susumukazu == 2 {
+//            if amarinokazu == 0 {
+//
+//            } else if amarinokazu == 1 {
+//
+//            }else if amarinokazu == 2 {
+//
+//            }
+//        } else if susumukazu == 3 {
+//            if amarinokazu == 0 {
+//
+//            } else if amarinokazu == 1{
+//
+//            } else if amarinokazu == 2 {
+//
+//            }
+//
+//        } else if susumukazu == 4 {
+//            if amarinokazu == 0 {
+//
+//            } else if amarinokazu == 1{
+//
+//            } else if amarinokazu == 2{
+//
+//            }
+//
+//        } else if susumukazu == 5 {
+//
+//            if amarinokazu == 0 {
+//
+//            } else if amarinokazu == 1{
+//
+//            } else if amarinokazu == 2 {
+//
+//            }
+//
+//        } else if susumukazu > 5 {
+//
+//        }
+//
+//        return cell
+//    }
+//
+//
+//
+//
+//
+//    /*
+//     // MARK: - Navigation
+//
+//     // In a storyboard-based application, you will often want to do a little preparation before navigation
+//     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//     // Get the new view controller using segue.destination.
+//     // Pass the selected object to the new view controller.
+//     }
+//     */
+//}
+
+//extension Koma1ViewController: UICollectionViewDelegate,UICollectionViewDataSource {
+//    func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        return 5
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+//        return 3
+//    }
+}
+
+extension Koma1ViewController: UICollectionViewDelegate,UICollectionViewDataSource {
+        func numberOfSections(in collectionView: UICollectionView) -> Int {
+            return 5
+        }
+        
+        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+            return 3
+        }
+   
+        func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionCollectionViewCell
+        
+        //cell.masu?.image = UIImage(named: "マス")
+        
+        ///おそらくこれで自分のTableViewの中のCellを呼び出しているIBActionみたいな役割果たしていると思う
+        ///
+        susumukazu = komasuu + susumukazu //結果的に進む数
+            print(susumukazu)
+        nangyou = susumukazu * 3
+        amarinokazu = (susumukazu + komasuu) % 3 //あまり
+        if susumukazu <= 2 {
+            if susumukazu == 1{
+                if indexPath.section == 0 {
+                    if indexPath.row == 0 {
+                        cell.Koma.image = UIImage(named: "マス")
+                    }
+                }
+            } else if susumukazu == 2 {
+                if indexPath.row == 2 {
+                    cell.Koma.image = UIImage(named: "マス")
+                }
+            }
+        } else if susumukazu == 2 {
+            if amarinokazu == 0 {
+                
+            } else if amarinokazu == 1 {
+                
+            }else if amarinokazu == 2 {
+            
+            }
+        } else if susumukazu == 3 {
+            if amarinokazu == 0 {
+                
+            } else if amarinokazu == 1{
+                
+            } else if amarinokazu == 2 {
+                
+            }
+            
+        } else if susumukazu == 4 {
+            if amarinokazu == 0 {
+                
+            } else if amarinokazu == 1{
+                
+            } else if amarinokazu == 2{
+                
+            }
+            
+        } else if susumukazu == 5 {
+            
+            if amarinokazu == 0 {
+                
+            } else if amarinokazu == 1{
+                
+            } else if amarinokazu == 2 {
+                
+            }
+            
+        } else if susumukazu > 5 {
+                
+        }
+        
         return cell
     }
     

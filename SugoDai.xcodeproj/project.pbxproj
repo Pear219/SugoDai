@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		41319B0027D756DE0037C29F /* KyukeijikanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41319AFF27D756DE0037C29F /* KyukeijikanViewController.swift */; };
+		414905E2287D8761006AE05E /* CollectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414905E0287D8761006AE05E /* CollectionCollectionViewCell.swift */; };
+		414905E3287D8761006AE05E /* CollectionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 414905E1287D8761006AE05E /* CollectionCollectionViewCell.xib */; };
 		4189958F27A0429000ADEFA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4189958E27A0429000ADEFA9 /* AppDelegate.swift */; };
 		4189959127A0429000ADEFA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4189959027A0429000ADEFA9 /* SceneDelegate.swift */; };
 		4189959627A0429000ADEFA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4189959427A0429000ADEFA9 /* Main.storyboard */; };
@@ -54,6 +56,8 @@
 
 /* Begin PBXFileReference section */
 		41319AFF27D756DE0037C29F /* KyukeijikanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KyukeijikanViewController.swift; sourceTree = "<group>"; };
+		414905E0287D8761006AE05E /* CollectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCollectionViewCell.swift; sourceTree = "<group>"; };
+		414905E1287D8761006AE05E /* CollectionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCollectionViewCell.xib; sourceTree = "<group>"; };
 		4189958B27A0429000ADEFA9 /* SugoDai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SugoDai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4189958E27A0429000ADEFA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4189959027A0429000ADEFA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +164,8 @@
 				4193676127B8CAD2004E3BB0 /* SetteiViewController.swift */,
 				4193676527BBA51F004E3BB0 /* HensyuTextViewController.swift */,
 				41319AFF27D756DE0037C29F /* KyukeijikanViewController.swift */,
+				414905E0287D8761006AE05E /* CollectionCollectionViewCell.swift */,
+				414905E1287D8761006AE05E /* CollectionCollectionViewCell.xib */,
 			);
 			path = SugoDai;
 			sourceTree = "<group>";
@@ -293,6 +299,7 @@
 				4189959827A0429200ADEFA9 /* Assets.xcassets in Resources */,
 				418995BF27A0430F00ADEFA9 /* 選択コマ.png in Resources */,
 				418995CF27AB829B00ADEFA9 /* 通路　長め.png in Resources */,
+				414905E3287D8761006AE05E /* CollectionCollectionViewCell.xib in Resources */,
 				4189959627A0429000ADEFA9 /* Main.storyboard in Resources */,
 				4193675827B00014004E3BB0 /* コマ影あり.png in Resources */,
 				418995CB27A6940000ADEFA9 /* 縦.png in Resources */,
@@ -322,6 +329,7 @@
 			files = (
 				4193676027B8CA29004E3BB0 /* Koma5ViewController.swift in Sources */,
 				4193676627BBA51F004E3BB0 /* HensyuTextViewController.swift in Sources */,
+				414905E2287D8761006AE05E /* CollectionCollectionViewCell.swift in Sources */,
 				418995C527A1482900ADEFA9 /* TimerViewController.swift in Sources */,
 				4193676227B8CAD2004E3BB0 /* SetteiViewController.swift in Sources */,
 				4189958F27A0429000ADEFA9 /* AppDelegate.swift in Sources */,

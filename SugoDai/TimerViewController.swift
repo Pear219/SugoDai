@@ -104,6 +104,7 @@ class TimerViewController: UIViewController {
                     //navigationをけして、tabbarしはいかまでいって、うつる！
 //                    self.present(nextView, animated: true, completion: nil)
                     self.navigationController?.popToRootViewController(animated: true)
+                    navigationController?.setNavigationBarHidden(false, animated: false)
                     
                     }
 
