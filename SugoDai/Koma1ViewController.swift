@@ -41,6 +41,9 @@ class Koma1ViewController: UIViewController{
     
     
     let saveData: UserDefaults = UserDefaults.standard
+    //saveDataはkomasuu＝その時にやった分だけしか進めない 奴が入っている
+    
+    let goukei: UserDefaults = UserDefaults.standard
     
     @IBOutlet weak var collection: UICollectionView!
     
@@ -58,7 +61,8 @@ class Koma1ViewController: UIViewController{
         
         komasuu = saveData.object(forKey: "countkoma") as! Int
         ///komasuuはTimerから値渡しされたもの。現段階ではやった分だけ(○分)だけ進むようになった！！
-        
+        susumukazu = goukei.object(forKey: "goukei") as! Int
+        print("値渡しされた数は\(susumukazu)")
         super.viewDidLoad()
         collection.register(UINib(nibName: "CollectionCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CollectionViewCell")
         // Do any additional setup after loading the view
@@ -183,20 +187,21 @@ extension Koma1ViewController: UICollectionViewDelegate,UICollectionViewDataSour
         //cell.masu?.image = UIImage(named: "マス")
         
         ///おそらくこれで自分のTableViewの中のCellを呼び出しているIBActionみたいな役割果たしていると思う
-        ///
+        
         susumukazu = komasuu + susumukazu //結果的に進む数
-            print(susumukazu)
+            print("結果的に進むのは\(susumukazu)")
+            goukei.set(susumukazu, forKey: "goukei")
         nangyou = susumukazu * 3
         amarinokazu = (susumukazu + komasuu) % 3 //あまり
         if susumukazu <= 2 {
-            if susumukazu == 1{
-                if indexPath.section == 0 {
+            if susumukazu == 1 {
+                if indexPath.row == 0 {
                     if indexPath.row == 0 {
                         cell.Koma.image = UIImage(named: "マス")
-                    }
+                }
                 }
             } else if susumukazu == 2 {
-                if indexPath.row == 2 {
+                if indexPath.row == 1 {
                     cell.Koma.image = UIImage(named: "マス")
                 }
             }

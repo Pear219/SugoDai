@@ -97,7 +97,7 @@ class TimerViewController: UIViewController {
                     //すたんぷがいっこふえる！
                     self.countkoma = self.countkoma + Int(str)!
                     saveData.set(countkoma, forKey: "countkoma")
-                    print(str)
+                    print("timerの分は\(str)")
     //                        let nextView = self.storyboard?.instantiateViewController(withIdentifier: "Koma1") as! Koma1ViewController
                     
                        // self.navigationController?.pushViewController(nextView, animated: true)
