@@ -61,7 +61,14 @@ class Koma1ViewController: UIViewController{
         
         komasuu = saveData.object(forKey: "countkoma") as! Int
         ///komasuuはTimerから値渡しされたもの。現段階ではやった分だけ(○分)だけ進むようになった！！
-        susumukazu = goukei.object(forKey: "goukei") as! Int
+        ///if letこうぶん
+        if let susumu = goukei.object(forKey: "goukei") {
+            //userdefaultsのなかみがnilじゃなかったら
+            susumukazu = susumu as! Int
+        } else {
+            
+        }
+        
         print("値渡しされた数は\(susumukazu)")
         super.viewDidLoad()
         collection.register(UINib(nibName: "CollectionCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CollectionViewCell")
@@ -195,12 +202,13 @@ extension Koma1ViewController: UICollectionViewDelegate,UICollectionViewDataSour
         amarinokazu = (susumukazu + komasuu) % 3 //あまり
         if susumukazu <= 2 {
             if susumukazu == 1 {
-                if indexPath.row == 0 {
+                if indexPath.section == 0 {
                     if indexPath.row == 0 {
                         cell.Koma.image = UIImage(named: "マス")
-                }
+                    }
                 }
             } else if susumukazu == 2 {
+                
                 if indexPath.row == 1 {
                     cell.Koma.image = UIImage(named: "マス")
                 }
