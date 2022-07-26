@@ -54,12 +54,18 @@ class Koma1ViewController: UIViewController{
 //
         //count2 = saveData.object(forKey: "hunn") as? Int
         
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width:100 , height: 100)
         layout.sectionInset = UIEdgeInsets(top: 25,left: 15,bottom: 25,right: 15)
         collection.collectionViewLayout = layout
         
-        komasuu = saveData.object(forKey: "countkoma") as! Int
+        if let koma = saveData.object(forKey: "countkoma") {
+            komasuu = koma as! Int
+        }
         ///komasuuはTimerから値渡しされたもの。現段階ではやった分だけ(○分)だけ進むようになった！！
         ///if letこうぶん
         if let susumu = goukei.object(forKey: "goukei") {
@@ -70,6 +76,9 @@ class Koma1ViewController: UIViewController{
         }
         
         print("値渡しされた数は\(susumukazu)")
+        susumukazu = komasuu + susumukazu //結果的に進む数
+            print("結果的に進むのは\(susumukazu)")
+            goukei.set(susumukazu, forKey: "goukei")
         super.viewDidLoad()
         collection.register(UINib(nibName: "CollectionCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CollectionViewCell")
         // Do any additional setup after loading the view
@@ -195,11 +204,13 @@ extension Koma1ViewController: UICollectionViewDelegate,UICollectionViewDataSour
         
         ///おそらくこれで自分のTableViewの中のCellを呼び出しているIBActionみたいな役割果たしていると思う
         
-        susumukazu = komasuu + susumukazu //結果的に進む数
-            print("結果的に進むのは\(susumukazu)")
-            goukei.set(susumukazu, forKey: "goukei")
-        nangyou = susumukazu * 3
-        amarinokazu = (susumukazu + komasuu) % 3 //あまり
+//        susumukazu = komasuu + susumukazu //結果的に進む数
+//            print("結果的に進むのは\(susumukazu)")
+//            goukei.set(susumukazu, forKey: "goukei")
+            
+        //nangyou = susumukazu * 3
+        //amarinokazu = (susumukazu + komasuu) % 3 //あまり
+            
         if susumukazu <= 2 {
             if susumukazu == 1 {
                 if indexPath.section == 0 {
@@ -208,21 +219,24 @@ extension Koma1ViewController: UICollectionViewDelegate,UICollectionViewDataSour
                     }
                 }
             } else if susumukazu == 2 {
-                
-                if indexPath.row == 1 {
+                if indexPath.section == 0 {
+                    if indexPath.row == 1 {
                     cell.Koma.image = UIImage(named: "マス")
+                    }
                 }
-            }
-        } else if susumukazu == 2 {
-            if amarinokazu == 0 {
-                
+              }
+        } else if susumukazu == 3 {
+            if indexPath.section == 2 {
+                if indexPath.row == 2 {
+                    
+                }
             } else if amarinokazu == 1 {
                 
             }else if amarinokazu == 2 {
             
-            }
-        } else if susumukazu == 3 {
-            if amarinokazu == 0 {
+            } else if susumukazu == 3 {
+            
+            } else   if amarinokazu == 0 {
                 
             } else if amarinokazu == 1{
                 
@@ -269,4 +283,5 @@ extension Koma1ViewController: UICollectionViewDelegate,UICollectionViewDataSour
      // Pass the selected object to the new view controller.
      }
      */
-}
+    }
+
