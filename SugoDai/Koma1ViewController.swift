@@ -211,61 +211,161 @@ extension Koma1ViewController: UICollectionViewDelegate,UICollectionViewDataSour
         //nangyou = susumukazu * 3
         //amarinokazu = (susumukazu + komasuu) % 3 //あまり
             
-        if susumukazu <= 2 {
-            if susumukazu == 1 {
+//        if susumukazu <= 2 {
+//            if susumukazu == 1 {
+//                if indexPath.section == 0 {
+//                    if indexPath.row == 0 {
+//                        cell.Koma.image = UIImage(named: "マス")
+//                    }
+//                }
+//            } else if susumukazu == 2 {
+//                if indexPath.section == 0 {
+//                    if indexPath.row == 1 {
+//                    cell.Koma.image = UIImage(named: "マス")
+//                    }
+//                }
+//              }
+//        } else {
+//            switch susumukazu {
+//               case 3:
+//                if indexPath.section  == 0
+//            }
+//
+//            if indexPath.section == 2 {
+//                if indexPath.row == 2 {
+//
+//                }
+//            } else if amarinokazu == 1 {
+//
+//            }else if amarinokazu == 2 {
+//
+//            } else if susumukazu == 3 {
+//
+//            } else   if amarinokazu == 0 {
+//
+//            } else if amarinokazu == 1{
+//
+//            } else if amarinokazu == 2 {
+//
+//            }
+//
+//        } else if susumukazu == 4 {
+//            if amarinokazu == 0 {
+//
+//            } else if amarinokazu == 1{
+//
+//            } else if amarinokazu == 2{
+//
+//            }
+//
+//        } else if susumukazu == 5 {
+//
+//            if amarinokazu == 0 {
+//
+//            } else if amarinokazu == 1{
+//
+//            } else if amarinokazu == 2 {
+//
+//            }
+//
+//        } else if susumukazu > 5 {
+//
+//        }
+            switch susumukazu {
+            case 1:
                 if indexPath.section == 0 {
                     if indexPath.row == 0 {
-                        cell.Koma.image = UIImage(named: "マス")
+                        cell.Koma.image = UIImage(named: "マス3")
                     }
                 }
-            } else if susumukazu == 2 {
+            case 2:
                 if indexPath.section == 0 {
                     if indexPath.row == 1 {
-                    cell.Koma.image = UIImage(named: "マス")
+                        cell.Koma.image  = UIImage(named: "マス3")
                     }
                 }
-              }
-        } else if susumukazu == 3 {
-            if indexPath.section == 2 {
-                if indexPath.row == 2 {
-                    
+            case 3:
+                if indexPath.section == 0 {
+                    if indexPath.row == 2 {
+                        cell.Koma.image = UIImage(named: "マス3")
+                    }
                 }
-            } else if amarinokazu == 1 {
-                
-            }else if amarinokazu == 2 {
+            case 4:
+                if indexPath.section == 1 {
+                    if indexPath.row == 0 {
+                        cell.Koma.image = UIImage(named: "マス3")
+                    }
+                }
+            case 5:
+                if indexPath.section == 1 {
+                    if indexPath.row == 1 {
+                        cell.Koma.image = UIImage(named: "マス3")
+                    }
+                }
+            case 6:
+                if indexPath.section == 1 {
+                    if indexPath.row == 2 {
+                        cell.Koma.image = UIImage(named: "マス3")
+                    }
+                }
+            case 7:
+                if indexPath.section == 2 {
+                    if indexPath.row == 0 {
+                        cell.Koma.image = UIImage(named: "マス3")
+                    }
+                }
+            case 8:
+                if indexPath.section == 2 {
+                    if indexPath.row == 1 {
+                        cell.Koma.image = UIImage(named: "マス3")
+                    }
+                }
+            case 9:
+                if indexPath.section == 2 {
+                    if indexPath.row == 2 {
+                        cell.Koma.image = UIImage(named: "マス3")
+                    }
+                }
+            case 10:
+                if indexPath.section == 3 {
+                    if indexPath.row == 0 {
+                        cell.Koma.image = UIImage(named: "マス3")
+                    }
+                }
+            case 11:
+                if indexPath.section == 3 {
+                    if indexPath.row == 1 {
+                        cell.Koma.image = UIImage(named: "マス3")
+                    }
+                }
+            case 12:
+                if indexPath.section == 3 {
+                    if indexPath.row == 2 {
+                        cell.Koma.image = UIImage(named: "マス3")
+                    }
+                }
+            case 13:
+                if indexPath.section == 4 {
+                    if indexPath.row == 0 {
+                        cell.Koma.image = UIImage(named: "マス3")
+                    }
+                }
+            case 14:
+                if indexPath.section == 4 {
+                    if indexPath.row == 1 {
+                        cell.Koma.image = UIImage(named: "マス3")
+                    }
+                }
+            case 15:
+                if indexPath.section == 4 {
+                    if indexPath.row == 2 {
+                        cell.Koma.image = UIImage(named: "マス3")
+                    }
+                }
             
-            } else if susumukazu == 3 {
-            
-            } else   if amarinokazu == 0 {
-                
-            } else if amarinokazu == 1{
-                
-            } else if amarinokazu == 2 {
-                
+            default:
+                break
             }
-            
-        } else if susumukazu == 4 {
-            if amarinokazu == 0 {
-                
-            } else if amarinokazu == 1{
-                
-            } else if amarinokazu == 2{
-                
-            }
-            
-        } else if susumukazu == 5 {
-            
-            if amarinokazu == 0 {
-                
-            } else if amarinokazu == 1{
-                
-            } else if amarinokazu == 2 {
-                
-            }
-            
-        } else if susumukazu > 5 {
-                
-        }
         
         return cell
     }
@@ -284,4 +384,3 @@ extension Koma1ViewController: UICollectionViewDelegate,UICollectionViewDataSour
      }
      */
     }
-
