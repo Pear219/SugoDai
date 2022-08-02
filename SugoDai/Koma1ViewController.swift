@@ -33,6 +33,8 @@ class Koma1ViewController: UIViewController{
     
     var nangyou: Int = 0
     
+    var section: Int
+    
         
 //    var count2: Int!
 //
@@ -44,6 +46,7 @@ class Koma1ViewController: UIViewController{
     //saveDataはkomasuu＝その時にやった分だけしか進めない 奴が入っている
     
     let goukei: UserDefaults = UserDefaults.standard
+    //今までの合計方法
     
     @IBOutlet weak var collection: UICollectionView!
     
@@ -79,11 +82,15 @@ class Koma1ViewController: UIViewController{
         susumukazu = komasuu + susumukazu //結果的に進む数
             print("結果的に進むのは\(susumukazu)")
             goukei.set(susumukazu, forKey: "goukei")
+        
+        nangyou = susumukazu/3
+        section = nangyou/5
         super.viewDidLoad()
         collection.register(UINib(nibName: "CollectionCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CollectionViewCell")
         // Do any additional setup after loading the view
     }
     
+   
 
     
     //func collectionView(_ collectonView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -193,8 +200,13 @@ extension Koma1ViewController: UICollectionViewDelegate,UICollectionViewDataSour
         }
         
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+            
+            
+            
             return 3
         }
+    
+    
    
         func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -290,84 +302,110 @@ extension Koma1ViewController: UICollectionViewDelegate,UICollectionViewDataSour
                         cell.Koma.image = UIImage(named: "マス3")
                     }
                 }
+            //3÷3=1..0
             case 4:
                 if indexPath.section == 1 {
                     if indexPath.row == 0 {
                         cell.Koma.image = UIImage(named: "マス3")
                     }
                 }
+            //4÷3=1..1
             case 5:
                 if indexPath.section == 1 {
                     if indexPath.row == 1 {
                         cell.Koma.image = UIImage(named: "マス3")
                     }
                 }
+            //5÷3=1..2
             case 6:
                 if indexPath.section == 1 {
                     if indexPath.row == 2 {
                         cell.Koma.image = UIImage(named: "マス3")
                     }
                 }
+            //6÷3=2
             case 7:
                 if indexPath.section == 2 {
                     if indexPath.row == 0 {
                         cell.Koma.image = UIImage(named: "マス3")
                     }
                 }
+            //7÷3=2...1
             case 8:
                 if indexPath.section == 2 {
                     if indexPath.row == 1 {
                         cell.Koma.image = UIImage(named: "マス3")
                     }
                 }
+            //8÷3=2..2
             case 9:
                 if indexPath.section == 2 {
                     if indexPath.row == 2 {
                         cell.Koma.image = UIImage(named: "マス3")
                     }
                 }
+            //9÷3=3..0
             case 10:
                 if indexPath.section == 3 {
                     if indexPath.row == 0 {
                         cell.Koma.image = UIImage(named: "マス3")
                     }
                 }
+            //10÷3=3..1
             case 11:
                 if indexPath.section == 3 {
                     if indexPath.row == 1 {
                         cell.Koma.image = UIImage(named: "マス3")
                     }
                 }
+            //11÷3=3..2
             case 12:
                 if indexPath.section == 3 {
                     if indexPath.row == 2 {
                         cell.Koma.image = UIImage(named: "マス3")
                     }
                 }
+            //12÷3=4
             case 13:
                 if indexPath.section == 4 {
                     if indexPath.row == 0 {
                         cell.Koma.image = UIImage(named: "マス3")
                     }
                 }
+            //13÷3=4..1
             case 14:
                 if indexPath.section == 4 {
                     if indexPath.row == 1 {
                         cell.Koma.image = UIImage(named: "マス3")
                     }
                 }
+            //14÷3=4..2
             case 15:
                 if indexPath.section == 4 {
                     if indexPath.row == 2 {
                         cell.Koma.image = UIImage(named: "マス3")
                     }
                 }
+            //15÷3=5
+            case 16:
+                if indexPath.section == 0 {
+                    if indexPath.row == 0 {
+                        cell.Koma.image = UIImage(named: "マス3")
+                    }
+                }
+            case 17:
+                if indexPath.section == 0 {
+                    if indexPath.row == 1 {
+                        cell.Koma.image = UIImage(named: "マス3")
+                    }
+                }
+                
             
             default:
                 break
             }
         
-        return cell
+        return section
     }
     
     
