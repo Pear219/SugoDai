@@ -87,6 +87,8 @@ class Koma1ViewController: UIViewController{
             nangyou = section/5  ///9/5=1
             section = section - 5*nangyou  ///9-5*1=4
         }
+        print(section)
+        amarinokazu = susumukazu%3 ///5%3 2 4%3 1
         super.viewDidLoad()
         collection.register(UINib(nibName: "CollectionCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CollectionViewCell")
         // Do any additional setup after loading the view
@@ -404,6 +406,397 @@ extension Koma1ViewController: UICollectionViewDelegate,UICollectionViewDataSour
 //            default:
 //                break
 //            }
+//            switch section {
+//            case 1:
+//                if indexPath.section == 0 {
+//                    cell.Koma.image = UIImage(named: "マス")
+//                }
+//            case 2:
+//                if indexPath.section == 1 {
+//                    cell.Koma.image = UIImage(named: "マス")
+//                }
+//                if indexPath.section == 0 {
+//                    cell.Koma.image = UIImage(named: "マス")
+//                }
+//            case 3:
+//                if indexPath.section == 1 {
+//                    cell.Koma.image = UIImage(named: "マス")
+//                }
+//                if indexPath.section == 0 {
+//                    cell.Koma.image = UIImage(named: "マス")
+//                }
+//                if indexPath.section == 2 {
+//                    cell.Koma.image = UIImage(named: "マス")
+//                }
+//            case 4:
+//                if indexPath.section == 1 {
+//                    cell.Koma.image = UIImage(named: "マス")
+//                }
+//                if indexPath.section == 0 {
+//                    cell.Koma.image = UIImage(named: "マス")
+//                }
+//                if indexPath.section == 2 {
+//                    cell.Koma.image = UIImage(named: "マス")
+//                }
+//                if indexPath.section == 3 {
+//                    cell.Koma.image = UIImage(named: "マス")
+//                }
+//
+//
+//                    default:
+//                        break
+//            }
+//            switch amarinokazu {
+//            case 1:
+//                if self.section == 0 {
+//                    if indexPath.section == 0 {
+//                        if indexPath.row == 0 {
+//                            cell.Koma.image = UIImage(named: "マス3")
+//                        }
+//                    }
+//                }
+//                if self.section == 1 {
+//                    if indexPath.section == 1 {
+//                        if indexPath.row == 0 {
+//                            cell.Koma.image = UIImage(named: "マス3")
+//                        }
+//                    }
+//                }
+//                if self.section == 2 {
+//                    if indexPath.section == 2 {
+//                        if indexPath.row == 0 {
+//                            cell.Koma.image = UIImage(named: "マス3")
+//                        }
+//                    }
+//
+//                }
+//                if self.section == 3 {
+//                    if indexPath.section == 3 {
+//                        if indexPath.row == 0 {
+//                            cell.Koma.image = UIImage(named: "マス3")
+//                        }
+//                    }
+//                }
+//                if self.section == 4 {
+//                    if indexPath.section == 4 {
+//                        if indexPath.row == 0 {
+//                            cell.Koma.image = UIImage(named: "マス3")
+//                        }
+//                    }
+//                }
+//            case 2:
+//                if self.section == 0 {
+//                    if indexPath.section == 0 {
+//                        if indexPath.row == 1 {
+//                            cell.Koma.image = UIImage(named: "マス3")
+//                        }
+//                        if indexPath.row == 0 {
+//                            cell.Koma.image = UIImage(named: "マス")
+//                        }
+//                    }
+//                }
+//                if self.section == 1 {
+//                    if indexPath.section == 1 {
+//                        if indexPath.row == 1 {
+//                            cell.Koma.image = UIImage(named: "マス3")
+//                        }
+//                    }
+//                }
+//                if self.section == 2 {
+//                    if indexPath.section == 2 {
+//                        if indexPath.row == 1 {
+//                            cell.Koma.image = UIImage(named: "マス3")
+//                        }
+//                    }
+//
+//                }
+//                if self.section == 3 {
+//                    if indexPath.section == 3 {
+//                        if indexPath.row == 1 {
+//                            cell.Koma.image = UIImage(named: "マス3")
+//                        }
+//                    }
+//                }
+//                if self.section == 4 {
+//                    if indexPath.section == 4 {
+//                        if indexPath.row == 1 {
+//                            cell.Koma.image = UIImage(named: "マス3")
+//                        }
+//                    }
+//                }
+//            case 0:
+//                if self.section == 1 {
+//                    if indexPath.section == 0 {
+//                        if indexPath.row == 2 {
+//                            cell.Koma.image = UIImage(named: "マス3")
+//                        }
+//                    }
+//                }
+//                if self.section == 2 {
+//                    if indexPath.section == 1 {
+//                        if indexPath.row == 2 {
+//                            cell.Koma.image = UIImage(named: "マス3")
+//                        }
+//                        if indexPath.row == 0 {
+//                            cell.Koma.image = UIImage(named: "マス")
+//                        }
+//                        if indexPath.row == 1 {
+//                            cell.Koma.image = UIImage(named: "マス")
+//                        }
+//                        print("correct")
+//                    }
+//                }
+//                if self.section == 3 {
+//                    if indexPath.section == 2 {
+//                        if indexPath.row == 2 {
+//                            cell.Koma.image = UIImage(named: "マス3")
+//                        }
+//                    }
+//                }
+//                if self.section == 4 {
+//                    if indexPath.section == 3 {
+//                        if indexPath.row == 2 {
+//                            cell.Koma.image = UIImage(named: "マス3")
+//                        }
+//                    }
+//                }
+//            default:
+//                break
+//            }
+            
+            switch section {
+            case 1:
+                if indexPath.section == 0 {
+                    cell.Koma.image = UIImage(named: "マス")
+                }
+            case 2:
+                if indexPath.section == 1 {
+                    cell.Koma.image = UIImage(named: "マス")
+                }
+                if indexPath.section == 0 {
+                    cell.Koma.image = UIImage(named: "マス")
+                }
+            case 3:
+                if indexPath.section == 1 {
+                    cell.Koma.image = UIImage(named: "マス")
+                }
+                if indexPath.section == 0 {
+                    cell.Koma.image = UIImage(named: "マス")
+                }
+                if indexPath.section == 2 {
+                    cell.Koma.image = UIImage(named: "マス")
+                }
+            case 4:
+                if indexPath.section == 1 {
+                    cell.Koma.image = UIImage(named: "マス")
+                }
+                if indexPath.section == 0 {
+                    cell.Koma.image = UIImage(named: "マス")
+                }
+                if indexPath.section == 2 {
+                    cell.Koma.image = UIImage(named: "マス")
+                }
+                if indexPath.section == 3 {
+                    cell.Koma.image = UIImage(named: "マス")
+                }
+                
+            
+                    default:
+                        break
+            }
+            
+            switch susumukazu {
+            case 1:
+                if indexPath.section == 0 {
+                    if indexPath.row == 0 {
+                        cell.Koma.image = UIImage(named: "マス3")
+                    }
+                }
+            case 2:
+                if indexPath.section == 0 {
+                    if indexPath.row == 1 {
+                        cell.Koma.image = UIImage(named: "マス3")
+                    }
+                    if indexPath.row == 0 {
+                        cell.Koma.image = UIImage(named: "マス")
+                    }
+                }
+            case 3:
+                if indexPath.section == 0 {
+                    if indexPath.row == 2 {
+                        cell.Koma.image = UIImage(named: "マス3")
+                    }
+                    if indexPath.row == 0 {
+                        cell.Koma.image = UIImage(named: "マス")
+                    }
+                    if indexPath.row == 1 {
+                        cell.Koma.image = UIImage(named: "マス")
+                    }
+                }
+            default:
+                break
+            }
+            switch amarinokazu {
+            case 1:
+                if self.section == 0 {
+                    if indexPath.section == 0 {
+                        if indexPath.row == 0 {
+                            cell.Koma.image = UIImage(named: "マス3")
+                        }
+                    }
+                }
+                if self.section == 1 {
+                    if indexPath.section == 1 {
+                        if indexPath.row == 0 {
+                            cell.Koma.image = UIImage(named: "マス3")
+                        }
+                    }
+                }
+                if self.section == 2 {
+                    if indexPath.section == 2 {
+                        if indexPath.row == 0 {
+                            cell.Koma.image = UIImage(named: "マス3")
+                        }
+                    }
+                    
+                }
+                if self.section == 3 {
+                    if indexPath.section == 3 {
+                        if indexPath.row == 0 {
+                            cell.Koma.image = UIImage(named: "マス3")
+                        }
+                    }
+                }
+                if self.section == 4 {
+                    if indexPath.section == 4 {
+                        if indexPath.row == 0 {
+                            cell.Koma.image = UIImage(named: "マス3")
+                        }
+                    }
+                }
+            case 2:
+                if self.section == 0 {
+                    if indexPath.section == 0 {
+                        if indexPath.row == 1 {
+                            cell.Koma.image = UIImage(named: "マス3")
+                        }
+                        if indexPath.row == 0 {
+                            cell.Koma.image = UIImage(named: "マス")
+                        }
+                    }
+                }
+                if self.section == 1 {
+                    if indexPath.section == 1 {
+                        if indexPath.row == 1 {
+                            cell.Koma.image = UIImage(named: "マス3")
+                        }
+                        if indexPath.row == 0 {
+                            cell.Koma.image = UIImage(named: "マス")
+                        }
+                    }
+                }
+                if self.section == 2 {
+                    if indexPath.section == 2 {
+                        if indexPath.row == 1 {
+                            cell.Koma.image = UIImage(named: "マス3")
+                        }
+                        if indexPath.row == 0 {
+                            cell.Koma.image = UIImage(named: "マス")
+                        }
+                    }
+                    
+                }
+                if self.section == 3 {
+                    if indexPath.section == 3 {
+                        if indexPath.row == 1 {
+                            cell.Koma.image = UIImage(named: "マス3")
+                        }
+                        if indexPath.row == 0 {
+                            cell.Koma.image = UIImage(named: "マス")
+                        }
+                    }
+                }
+                if self.section == 4 {
+                    if indexPath.section == 4 {
+                        if indexPath.row == 1 {
+                            cell.Koma.image = UIImage(named: "マス3")
+                        }
+                        if indexPath.row == 0 {
+                            cell.Koma.image = UIImage(named: "マス")
+                        }
+                    }
+                }
+            case 0:
+                if self.section == 1 {
+                    if indexPath.section == 0 {
+                        if indexPath.row == 2 {
+                            cell.Koma.image = UIImage(named: "マス3")
+                        }
+                        if indexPath.row == 0 {
+                            cell.Koma.image = UIImage(named: "マス")
+                        }
+                        if indexPath.row == 1 {
+                            cell.Koma.image = UIImage(named: "マス")
+                        }
+                    }
+                }
+                if self.section == 2 {
+                    if indexPath.section == 1 {
+                        if indexPath.row == 2 {
+                            cell.Koma.image = UIImage(named: "マス3")
+                        }
+                        if indexPath.row == 0 {
+                            cell.Koma.image = UIImage(named: "マス")
+                        }
+                        if indexPath.row == 1 {
+                            cell.Koma.image = UIImage(named: "マス")
+                        }
+                        print("correct")
+                    }
+                }
+                if self.section == 3 {
+                    if indexPath.section == 2 {
+                        if indexPath.row == 2 {
+                            cell.Koma.image = UIImage(named: "マス3")
+                        }
+                        if indexPath.row == 0 {
+                            cell.Koma.image = UIImage(named: "マス")
+                        }
+                        if indexPath.row == 1 {
+                            cell.Koma.image = UIImage(named: "マス")
+                        }
+                    }
+                }
+                if self.section == 4 {
+                    if indexPath.section == 3 {
+                        if indexPath.row == 2 {
+                            cell.Koma.image = UIImage(named: "マス3")
+                        }
+                        if indexPath.row == 0 {
+                            cell.Koma.image = UIImage(named: "マス")
+                        }
+                        if indexPath.row == 1 {
+                            cell.Koma.image = UIImage(named: "マス")
+                        }
+                    }
+                }
+                if self.section == 5 {
+                    if indexPath.section == 4 {
+                        if indexPath.row == 2 {
+                            cell.Koma.image = UIImage(named: "マス3")
+                        }
+                        if indexPath.row == 0 {
+                            cell.Koma.image = UIImage(named: "マス")
+                        }
+                        if indexPath.row == 1 {
+                            cell.Koma.image = UIImage(named: "マス")
+                        }
+                    }
+                }
+            default:
+                break
+            }
+            
         
         return cell
     }
