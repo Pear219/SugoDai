@@ -10,6 +10,10 @@ import UIKit
 class HensyuTextViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var HensyuTextView: UITextField!
+    
+    @IBOutlet var text: UITextField!
+    
+    var UD: UserDefaults = UserDefaults.standard
 
     override func viewDidLoad() {
         
@@ -19,10 +23,15 @@ class HensyuTextViewController: UIViewController, UITextFieldDelegate {
 
         // Do any additional setup after loading the view.
     }
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         HensyuTextView.resignFirstResponder()
         return true
+    }
+    
+    @IBAction func save() {
+        print("押されたよー")
+        UD.set(HensyuTextView.text, forKey: "text")
+        performSegue(withIdentifier: "toNext", sender: nil)
     }
     
 

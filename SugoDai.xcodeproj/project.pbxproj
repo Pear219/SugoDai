@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		41319B0027D756DE0037C29F /* KyukeijikanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41319AFF27D756DE0037C29F /* KyukeijikanViewController.swift */; };
+		4140B94828B4EBEE0073A827 /* SelectedSetteiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4140B94728B4EBEE0073A827 /* SelectedSetteiViewController.swift */; };
+		4140B94A28B66F3B0073A827 /* BackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4140B94928B66F3B0073A827 /* BackViewController.swift */; };
 		414905E2287D8761006AE05E /* CollectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414905E0287D8761006AE05E /* CollectionCollectionViewCell.swift */; };
 		414905E3287D8761006AE05E /* CollectionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 414905E1287D8761006AE05E /* CollectionCollectionViewCell.xib */; };
 		414905E52890315F006AE05E /* マス2.png in Resources */ = {isa = PBXBuildFile; fileRef = 414905E42890315E006AE05E /* マス2.png */; };
@@ -58,6 +60,8 @@
 
 /* Begin PBXFileReference section */
 		41319AFF27D756DE0037C29F /* KyukeijikanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KyukeijikanViewController.swift; sourceTree = "<group>"; };
+		4140B94728B4EBEE0073A827 /* SelectedSetteiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedSetteiViewController.swift; sourceTree = "<group>"; };
+		4140B94928B66F3B0073A827 /* BackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackViewController.swift; sourceTree = "<group>"; };
 		414905E0287D8761006AE05E /* CollectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCollectionViewCell.swift; sourceTree = "<group>"; };
 		414905E1287D8761006AE05E /* CollectionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCollectionViewCell.xib; sourceTree = "<group>"; };
 		414905E42890315E006AE05E /* マス2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "マス2.png"; path = "../マス2.png"; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 				41319AFF27D756DE0037C29F /* KyukeijikanViewController.swift */,
 				414905E0287D8761006AE05E /* CollectionCollectionViewCell.swift */,
 				414905E1287D8761006AE05E /* CollectionCollectionViewCell.xib */,
+				4140B94728B4EBEE0073A827 /* SelectedSetteiViewController.swift */,
+				4140B94928B66F3B0073A827 /* BackViewController.swift */,
 			);
 			path = SugoDai;
 			sourceTree = "<group>";
@@ -338,6 +344,7 @@
 				4193676027B8CA29004E3BB0 /* Koma5ViewController.swift in Sources */,
 				4193676627BBA51F004E3BB0 /* HensyuTextViewController.swift in Sources */,
 				414905E2287D8761006AE05E /* CollectionCollectionViewCell.swift in Sources */,
+				4140B94A28B66F3B0073A827 /* BackViewController.swift in Sources */,
 				418995C527A1482900ADEFA9 /* TimerViewController.swift in Sources */,
 				4193676227B8CAD2004E3BB0 /* SetteiViewController.swift in Sources */,
 				4189958F27A0429000ADEFA9 /* AppDelegate.swift in Sources */,
@@ -349,6 +356,7 @@
 				4193675C27B28928004E3BB0 /* Koma3ViewController.swift in Sources */,
 				41319B0027D756DE0037C29F /* KyukeijikanViewController.swift in Sources */,
 				4189959127A0429000ADEFA9 /* SceneDelegate.swift in Sources */,
+				4140B94828B4EBEE0073A827 /* SelectedSetteiViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

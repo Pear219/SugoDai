@@ -50,6 +50,34 @@
                                     <segue destination="6l5-C0-l7e" kind="show" id="Q4W-Fe-xhb"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="やる事" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4b-dD-WkC">
+                                <rect key="frame" x="97" y="321" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="やる事" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHO-52-saJ">
+                                <rect key="frame" x="276" y="320" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="やる事" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuw-fR-E3A">
+                                <rect key="frame" x="97" y="514" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="やる事" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehd-HY-SBP">
+                                <rect key="frame" x="276" y="513" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -60,6 +88,10 @@
                         <outlet property="Button2" destination="DGj-0v-k7J" id="Y9d-rl-CNn"/>
                         <outlet property="Button3" destination="HJR-i0-c7T" id="GOJ-90-h8X"/>
                         <outlet property="Button4" destination="13l-tP-BmP" id="bC1-7x-MNb"/>
+                        <outlet property="label1" destination="V4b-dD-WkC" id="QIE-HP-sJD"/>
+                        <outlet property="label2" destination="wHO-52-saJ" id="Q8G-6W-OWS"/>
+                        <outlet property="label3" destination="tuw-fR-E3A" id="lL0-Xo-Wbz"/>
+                        <outlet property="label4" destination="ehd-HY-SBP" id="VCs-TL-ICl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -187,10 +219,10 @@
             </objects>
             <point key="canvasLocation" x="944.92753623188412" y="2362.5"/>
         </scene>
-        <!--Select View Controller-->
+        <!--Selected Settei View Controller-->
         <scene sceneID="NCK-Hq-bZg">
             <objects>
-                <viewController id="ald-xZ-Xlg" customClass="SelectViewController" customModule="SugoDai" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ald-xZ-Xlg" customClass="SelectedSetteiViewController" customModule="SugoDai" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5gw-ej-y59">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -204,6 +236,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="選択コマ.png"/>
                                         <connections>
+                                            <action selector="label" destination="ald-xZ-Xlg" eventType="touchUpInside" id="pVg-Fo-drV"/>
                                             <segue destination="oHv-iz-Wfb" kind="show" id="UxH-Fj-v65"/>
                                         </connections>
                                     </button>
@@ -212,6 +245,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="選択コマ.png"/>
                                         <connections>
+                                            <action selector="label22" destination="ald-xZ-Xlg" eventType="touchUpInside" id="yTo-H4-lz2"/>
                                             <segue destination="oHv-iz-Wfb" kind="show" id="pjA-M1-iKL"/>
                                         </connections>
                                     </button>
@@ -220,6 +254,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="選択コマ.png"/>
                                         <connections>
+                                            <action selector="label33" destination="ald-xZ-Xlg" eventType="touchUpInside" id="woY-as-4ow"/>
                                             <segue destination="oHv-iz-Wfb" kind="show" id="2Gv-wz-qPh"/>
                                         </connections>
                                     </button>
@@ -228,11 +263,40 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="選択コマ.png"/>
                                         <connections>
+                                            <action selector="label11" destination="ald-xZ-Xlg" eventType="touchUpInside" id="chL-kQ-nQE"/>
                                             <segue destination="oHv-iz-Wfb" kind="show" id="YTo-ip-uV2"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="どれを編集しますか？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1j3-gC-4K4">
                                         <rect key="frame" x="121" y="166" width="174" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdC-mL-HwX">
+                                        <rect key="frame" x="62" y="321" width="120" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guV-cO-ZIe">
+                                        <rect key="frame" x="241" y="321" width="120" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQe-zk-Xie">
+                                        <rect key="frame" x="62" y="514" width="120" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6P-JK-V2y">
+                                        <rect key="frame" x="241" y="514" width="120" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -247,10 +311,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="XfU-r3-vyk"/>
+                    <connections>
+                        <outlet property="label1" destination="tdC-mL-HwX" id="Shg-Xq-EEZ"/>
+                        <outlet property="label2" destination="guV-cO-ZIe" id="43e-3A-po3"/>
+                        <outlet property="label3" destination="bQe-zk-Xie" id="hcp-yZ-qBk"/>
+                        <outlet property="label4" destination="A6P-JK-V2y" id="3pq-1z-WS5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xQv-I0-RsX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1855" y="1602"/>
+            <point key="canvasLocation" x="1853.6231884057972" y="1601.7857142857142"/>
         </scene>
         <!--Hensyu Text View Controller-->
         <scene sceneID="Maa-QL-7yu">
@@ -276,24 +346,25 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="PzI-bM-SJz">
-                        <barButtonItem key="rightBarButtonItem" title="決定" id="Udg-2L-Boz">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="MoA-U8-Xvj">
                             <connections>
-                                <segue destination="DbN-kW-06W" kind="show" id="kvY-tK-U6f"/>
+                                <action selector="save" destination="oHv-iz-Wfb" id="hFp-rL-4TB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="HensyuTextView" destination="XOB-BF-epn" id="ZTP-jX-bBs"/>
+                        <outlet property="HensyuTextView" destination="XOB-BF-epn" id="bm8-y4-4Uq"/>
+                        <segue destination="DbN-kW-06W" kind="show" identifier="toNext" id="xvr-QF-dpQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cC3-iU-lWb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2765" y="1602"/>
+            <point key="canvasLocation" x="2796" y="1602"/>
         </scene>
-        <!--View Controller-->
+        <!--Back View Controller-->
         <scene sceneID="Gf3-en-Fpl">
             <objects>
-                <viewController id="DbN-kW-06W" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="nextView" id="DbN-kW-06W" customClass="BackViewController" customModule="SugoDai" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G1o-MH-szk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -302,6 +373,9 @@
                                 <rect key="frame" x="132" y="403" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="選択コマ.png"/>
+                                <connections>
+                                    <action selector="backk" destination="DbN-kW-06W" eventType="touchDown" id="2QF-ib-Y7X"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="編集が完了しました" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FS-Ch-5yh">
                                 <rect key="frame" x="111" y="286" width="193" height="26"/>
@@ -322,6 +396,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="kDd-4V-cF9"/>
+                    <connections>
+                        <outlet property="back" destination="UVO-9W-QNb" id="Rrb-Ak-iCe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="InM-bG-ekY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1230,7 +1307,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="QYC-cS-ofV"/>
-        <segue reference="pa2-iL-LfZ"/>
+        <segue reference="xvr-QF-dpQ"/>
         <segue reference="2Gv-wz-qPh"/>
     </inferredMetricsTieBreakers>
     <resources>

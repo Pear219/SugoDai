@@ -1,22 +1,25 @@
 //
-//  SetteiViewController.swift
+//  BackViewController.swift
 //  SugoDai
 //
-//  Created by 加藤 on 2022/02/13.
+//  Created by 加藤 on 2022/08/24.
 //
 
 import UIKit
 
-class SetteiViewController: UIViewController {
+class BackViewController: UIViewController {
     
-    @IBOutlet var Settei1: UIButton!
-    @IBOutlet var Settei2: UIButton!
+    @IBOutlet var back: UIButton!
 
     override func viewDidLoad() {
-        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func backk() {
+        print("押されたぜ")
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
 
