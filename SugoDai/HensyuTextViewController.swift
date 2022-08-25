@@ -29,7 +29,7 @@ class HensyuTextViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func save() {
-        print("押されたよー")
+        print("押された")
         UD.set(HensyuTextView.text, forKey: "text")
         performSegue(withIdentifier: "toNext", sender: nil)
     }

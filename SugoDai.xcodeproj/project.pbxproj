@@ -32,10 +32,6 @@
 		418995CF27AB829B00ADEFA9 /* 通路　長め.png in Resources */ = {isa = PBXBuildFile; fileRef = 418995CE27AB829B00ADEFA9 /* 通路　長め.png */; };
 		418995D127AB839200ADEFA9 /* マス.png in Resources */ = {isa = PBXBuildFile; fileRef = 418995D027AB839200ADEFA9 /* マス.png */; };
 		4193675827B00014004E3BB0 /* コマ影あり.png in Resources */ = {isa = PBXBuildFile; fileRef = 4193675727B00014004E3BB0 /* コマ影あり.png */; };
-		4193675A27B28313004E3BB0 /* Koma2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4193675927B28313004E3BB0 /* Koma2ViewController.swift */; };
-		4193675C27B28928004E3BB0 /* Koma3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4193675B27B28928004E3BB0 /* Koma3ViewController.swift */; };
-		4193675E27B8C96F004E3BB0 /* Koma4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4193675D27B8C96F004E3BB0 /* Koma4ViewController.swift */; };
-		4193676027B8CA29004E3BB0 /* Koma5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4193675F27B8CA29004E3BB0 /* Koma5ViewController.swift */; };
 		4193676227B8CAD2004E3BB0 /* SetteiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4193676127B8CAD2004E3BB0 /* SetteiViewController.swift */; };
 		4193676627BBA51F004E3BB0 /* HensyuTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4193676527BBA51F004E3BB0 /* HensyuTextViewController.swift */; };
 		41C3618D284628780085385A /* 影アリくん.png in Resources */ = {isa = PBXBuildFile; fileRef = 41C3618C284628780085385A /* 影アリくん.png */; };
@@ -90,10 +86,6 @@
 		418995CE27AB829B00ADEFA9 /* 通路　長め.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "通路　長め.png"; sourceTree = "<group>"; };
 		418995D027AB839200ADEFA9 /* マス.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "マス.png"; sourceTree = "<group>"; };
 		4193675727B00014004E3BB0 /* コマ影あり.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "コマ影あり.png"; sourceTree = "<group>"; };
-		4193675927B28313004E3BB0 /* Koma2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Koma2ViewController.swift; sourceTree = "<group>"; };
-		4193675B27B28928004E3BB0 /* Koma3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Koma3ViewController.swift; sourceTree = "<group>"; };
-		4193675D27B8C96F004E3BB0 /* Koma4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Koma4ViewController.swift; sourceTree = "<group>"; };
-		4193675F27B8CA29004E3BB0 /* Koma5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Koma5ViewController.swift; sourceTree = "<group>"; };
 		4193676127B8CAD2004E3BB0 /* SetteiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetteiViewController.swift; sourceTree = "<group>"; };
 		4193676527BBA51F004E3BB0 /* HensyuTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HensyuTextViewController.swift; sourceTree = "<group>"; };
 		41C3618C284628780085385A /* 影アリくん.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "影アリくん.png"; sourceTree = "<group>"; };
@@ -167,10 +159,6 @@
 				418995C227A136A000ADEFA9 /* PickerViewController.swift */,
 				418995C427A1482900ADEFA9 /* TimerViewController.swift */,
 				418995CC27AA9F3800ADEFA9 /* Koma1ViewController.swift */,
-				4193675927B28313004E3BB0 /* Koma2ViewController.swift */,
-				4193675B27B28928004E3BB0 /* Koma3ViewController.swift */,
-				4193675D27B8C96F004E3BB0 /* Koma4ViewController.swift */,
-				4193675F27B8CA29004E3BB0 /* Koma5ViewController.swift */,
 				4193676127B8CAD2004E3BB0 /* SetteiViewController.swift */,
 				4193676527BBA51F004E3BB0 /* HensyuTextViewController.swift */,
 				41319AFF27D756DE0037C29F /* KyukeijikanViewController.swift */,
@@ -341,19 +329,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4193676027B8CA29004E3BB0 /* Koma5ViewController.swift in Sources */,
 				4193676627BBA51F004E3BB0 /* HensyuTextViewController.swift in Sources */,
 				414905E2287D8761006AE05E /* CollectionCollectionViewCell.swift in Sources */,
 				4140B94A28B66F3B0073A827 /* BackViewController.swift in Sources */,
 				418995C527A1482900ADEFA9 /* TimerViewController.swift in Sources */,
 				4193676227B8CAD2004E3BB0 /* SetteiViewController.swift in Sources */,
 				4189958F27A0429000ADEFA9 /* AppDelegate.swift in Sources */,
-				4193675A27B28313004E3BB0 /* Koma2ViewController.swift in Sources */,
-				4193675E27B8C96F004E3BB0 /* Koma4ViewController.swift in Sources */,
 				418995CD27AA9F3800ADEFA9 /* Koma1ViewController.swift in Sources */,
 				418995C127A043C400ADEFA9 /* SelectViewController.swift in Sources */,
 				418995C327A136A000ADEFA9 /* PickerViewController.swift in Sources */,
-				4193675C27B28928004E3BB0 /* Koma3ViewController.swift in Sources */,
 				41319B0027D756DE0037C29F /* KyukeijikanViewController.swift in Sources */,
 				4189959127A0429000ADEFA9 /* SceneDelegate.swift in Sources */,
 				4140B94828B4EBEE0073A827 /* SelectedSetteiViewController.swift in Sources */,

@@ -18,7 +18,7 @@ class BackViewController: UIViewController {
     }
     
     @IBAction func backk() {
-        print("押されたぜ")
+        print("戻る")
         self.navigationController?.popToRootViewController(animated: true)
     }
     

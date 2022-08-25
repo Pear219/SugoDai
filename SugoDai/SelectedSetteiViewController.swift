@@ -30,11 +30,13 @@ class SelectedSetteiViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         label1.text = UD.object(forKey: "label1") as? String
         print(label1.text!)
         label2.text = UD.object(forKey: "label2") as? String
         label3.text = UD.object(forKey: "label3") as? String
         label4.text = UD.object(forKey: "label4") as? String
+        
     }
     
     @IBAction func label() {
