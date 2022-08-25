@@ -14,8 +14,13 @@ class HensyuTextViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var text: UITextField!
     
     var UD: UserDefaults = UserDefaults.standard
+    
+    var label: Int! ///SeletedSetteiで何番目のボタンを押したのか(どれを変更したいのか)
 
     override func viewDidLoad() {
+        
+        label = UD.object(forKey: "label") as? Int
+        
         
         HensyuTextView.delegate = self
         
@@ -30,7 +35,18 @@ class HensyuTextViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func save() {
         print("押された")
-        UD.set(HensyuTextView.text, forKey: "text")
+//        UD.set(HensyuTextView.text, forKey: "text")
+        
+        if label == 1 {
+            UD.set(HensyuTextView.text, forKey: "label1")
+        } else if label == 2 {
+            UD.set(HensyuTextView.text, forKey: "label2")
+        } else if label == 3 {
+            UD.set(HensyuTextView.text, forKey: "label3")
+        } else if label == 4 {
+            UD.set(HensyuTextView.text, forKey: "label4")
+        }
+        
         performSegue(withIdentifier: "toNext", sender: nil)
     }
     

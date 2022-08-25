@@ -67,31 +67,60 @@ class SelectViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        label = UD.object(forKey: "label") as? Int
+//        label = UD.object(forKey: "label") as? Int
+//
+//        if label == 1 {
+//            label1.text = UD.object(forKey: "text") as? String
+//        } else if label == 2 {
+//            label2.text = UD.object(forKey: "text") as? String
+//        } else if label == 3 {
+//            label3.text = UD.object(forKey: "text") as? String
+//        } else if label == 4 {
+//            label4.text = UD.object(forKey: "text") as? String
+//        }
+//
+//        if (label == 2 || label == 3 || label == 4 ) {
+//            label1.text = UD.object(forKey: "label1") as? String
+//        } else if  (label == 1 || label == 3 || label == 4 ) {
+//            label2.text = UD.object(forKey: "label2") as? String
+//        } else if (label == 1 || label == 2 || label == 4 ) {
+//            label3.text = UD.object(forKey: "label3") as? String
+//        } else if (label == 1 || label == 2 || label == 3 ) {
+//            label4.text = UD.object(forKey: "label4") as? String
+//        } else {
+//            label1.text = UD.object(forKey: "label1") as? String
+//            label2.text = UD.object(forKey: "label2") as? String
+//            label3.text = UD.object(forKey: "label3") as? String
+//            label4.text = UD.object(forKey: "label4") as? String
+//        }
         
-        if label == 1 {
-            label1.text = UD.object(forKey: "text") as? String
-        } else if label == 2 {
-            label2.text = UD.object(forKey: "text") as? String
-        } else if label == 3 {
-            label3.text = UD.object(forKey: "text") as? String
-        } else if label == 4 {
-            label4.text = UD.object(forKey: "text") as? String
+        label1.text = UD.object(forKey: "label1")as? String
+        label2.text = UD.object(forKey: "label2")as? String
+        label3.text = UD.object(forKey: "label3")as? String
+        label4.text = UD.object(forKey: "label4")as? String
+        
+        
+        ///初期値または一度も変更されていなかった場合
+        if UD.object(forKey: "label1") != nil {
+            
+        } else {
+            label1.text = "ランニング"
         }
         
-        if (label == 2 || label == 3 || label == 4 ) {
-            label1.text = UD.object(forKey: "label1") as? String
-        } else if  (label == 1 || label == 3 || label == 4 ) {
-            label2.text = UD.object(forKey: "label2") as? String
-        } else if (label == 1 || label == 2 || label == 4 ) {
-            label3.text = UD.object(forKey: "label3") as? String
-        } else if (label == 1 || label == 2 || label == 3 ) {
-            label4.text = UD.object(forKey: "label4") as? String
+        if UD.object(forKey: "label2") != nil {
+            
         } else {
-            label1.text = UD.object(forKey: "label1") as? String
-            label2.text = UD.object(forKey: "label2") as? String
-            label3.text = UD.object(forKey: "label3") as? String
-            label4.text = UD.object(forKey: "label4") as? String
+            label2.text = "ウォーキング"
+        }
+        if UD.object(forKey: "label3") != nil {
+            
+        } else {
+            label3.text = "腕立て伏せ"
+        }
+        if UD.object(forKey: "label4") != nil {
+            
+        } else {
+            label4.text = "ストレッチ"
         }
         
         
@@ -99,9 +128,6 @@ class SelectViewController: UIViewController {
         UD.set(label2.text, forKey: "label2")
         UD.set(label3.text, forKey: "label3")
         UD.set(label4.text, forKey: "label4")
-        
-    print(label1.text!)
-        
     }
     
 
