@@ -96,7 +96,6 @@ class TimerViewController: UIViewController {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in ///0.5秒待つ
                     //すたんぷがいっこふえる！
                     self.countkoma = self.countkoma + Int(str)!
-                    countkoma = 1
                     saveData.set(countkoma, forKey: "countkoma")
                     print("timerの分は\(str)")
     //                        let nextView = self.storyboard?.instantiateViewController(withIdentifier: "Koma1") as! Koma1ViewController

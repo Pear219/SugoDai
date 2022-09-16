@@ -29,7 +29,7 @@ class Koma1ViewController: UIViewController{
     //komasuu=受け取ったやつ
     var amarinokazu: Int = 0
     
-    var susumukazu: Int = 4
+    var susumukazu: Int = 0
     
     var nangyou: Int = 0
     
@@ -91,7 +91,7 @@ class Koma1ViewController: UIViewController{
         }
         print("\(section)行表示") //5 0
         amarinokazu = susumukazu%3 ///5%3 2 4%3 1  30%3=0
-        collection.reloadData()
+//        collection.reloadData()
         print("\(amarinokazu)あまりの数")
         collection.register(UINib(nibName: "CollectionCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CollectionViewCell")
         
@@ -604,16 +604,17 @@ extension Koma1ViewController: UICollectionViewDelegate,UICollectionViewDataSour
             switch amarinokazu {
             case 1:
                 print("あまり1")
-                if self.section == 0 {
+    
+                 if self.section == 0 { //1
                     if indexPath.section == 0 {
                         if indexPath.row == 0 {
                             cell.Koma.image = UIImage(named: "マス3")
                         }
                     }
-                }
-                if self.section == 1 {
+                 }
+                if self.section == 1 { //4
                     if indexPath.section == 1 {
-                        if indexPath.row == 0 {
+                        if indexPath.row == 2 {
                             cell.Koma.image = UIImage(named: "マス3")
                         }
                     }
@@ -628,7 +629,7 @@ extension Koma1ViewController: UICollectionViewDelegate,UICollectionViewDataSour
                 }
                 if self.section == 3 {
                     if indexPath.section == 3 {
-                        if indexPath.row == 0 {
+                        if indexPath.row == 2 {
                             cell.Koma.image = UIImage(named: "マス3")
                         }
                     }

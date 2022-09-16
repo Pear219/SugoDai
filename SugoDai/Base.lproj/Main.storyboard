@@ -97,7 +97,7 @@
             </objects>
             <point key="canvasLocation" x="2765.217391304348" y="93.75"/>
         </scene>
-        <!--Item-->
+        <!--setting-->
         <scene sceneID="4hX-5f-tZh">
             <objects>
                 <viewController id="XBl-Es-Wmu" customClass="SetteiViewController" customModule="SugoDai" customModuleProvider="target" sceneMemberID="viewController">
@@ -138,8 +138,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="休憩時間の変更" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZA-lU-3r3">
-                                <rect key="frame" x="241" y="321" width="122" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coming soon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZA-lU-3r3">
+                                <rect key="frame" x="252" y="321" width="101" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coming soon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3BF-jE-c8b">
+                                <rect key="frame" x="73" y="514" width="101" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coming soon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyw-vr-aBz">
+                                <rect key="frame" x="252" y="514" width="101" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -149,7 +163,7 @@
                         <viewLayoutGuide key="safeArea" id="Vix-1v-nUa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Aq5-dk-Y7t"/>
+                    <tabBarItem key="tabBarItem" title="setting" image="gear" catalog="system" selectedImage="gear" id="Aq5-dk-Y7t"/>
                     <navigationItem key="navigationItem" id="bzz-zd-Q4W"/>
                     <connections>
                         <outlet property="Settei1" destination="CY8-ON-qvf" id="4PF-e9-2mv"/>
@@ -543,7 +557,7 @@
             </objects>
             <point key="canvasLocation" x="4356.521739130435" y="93.75"/>
         </scene>
-        <!--Item-->
+        <!--koma-->
         <scene sceneID="ki0-dP-CsW">
             <objects>
                 <viewController storyboardIdentifier="Koma1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="go5-I7-gnY" customClass="Koma1ViewController" customModule="SugoDai" customModuleProvider="target" sceneMemberID="viewController">
@@ -552,7 +566,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="CollectionViewCell" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XYV-G6-1nr">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VRK-Yq-raz">
@@ -561,6 +575,10 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <imageView key="backgroundView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="背景2.png" id="foF-9v-9k9">
+                                    <rect key="frame" x="0.0" y="-44" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CollectionViewCell" reuseIdentifier="CollectionViewCell" id="p21-qq-Mjp">
                                         <rect key="frame" x="0.0" y="0.0" width="148" height="170"/>
@@ -581,7 +599,7 @@
                         <viewLayoutGuide key="safeArea" id="aDT-l5-SHP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="6FV-Qk-j69"/>
+                    <tabBarItem key="tabBarItem" title="koma" image="list.bullet.rectangle.portrait" catalog="system" selectedImage="list.bullet.rectangle.portrait" id="6FV-Qk-j69"/>
                     <connections>
                         <outlet property="collection" destination="XYV-G6-1nr" id="LGb-Qk-pga"/>
                     </connections>
@@ -590,11 +608,11 @@
             </objects>
             <point key="canvasLocation" x="1853.6231884057972" y="838.39285714285711"/>
         </scene>
-        <!--Item-->
+        <!--setting-->
         <scene sceneID="afz-ha-sto">
             <objects>
                 <navigationController id="0c9-FS-uoc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="NX4-q8-gMo"/>
+                    <tabBarItem key="tabBarItem" title="setting" selectedImage="gear" catalog="system" id="NX4-q8-gMo"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CT3-zp-wXu">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -605,7 +623,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a7b-by-ZCv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="945" y="838"/>
+            <point key="canvasLocation" x="46" y="1602"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dcZ-1m-kW5">
@@ -627,11 +645,11 @@
             </objects>
             <point key="canvasLocation" x="944.92753623188412" y="93.75"/>
         </scene>
-        <!--Item-->
+        <!--exercise-->
         <scene sceneID="hpf-rH-os5">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FyD-E9-tuS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Iqh-Yu-FGb"/>
+                    <tabBarItem key="tabBarItem" title="exercise" image="figure.walk" catalog="system" selectedImage="figure.walk" id="Iqh-Yu-FGb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="won-DN-MIk">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -653,6 +671,10 @@
         <segue reference="2Gv-wz-qPh"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="figure.walk" catalog="system" width="95" height="128"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="list.bullet.rectangle.portrait" catalog="system" width="115" height="128"/>
+        <image name="背景2.png" width="828" height="1792"/>
         <image name="選択コマ.png" width="168" height="168"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
