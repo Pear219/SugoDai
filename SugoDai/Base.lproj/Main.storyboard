@@ -622,20 +622,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BO6-v4-qqH">
-                                <rect key="frame" x="131" y="170" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eF-bf-RrI">
-                                <rect key="frame" x="300" y="170" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お疲れ様でした！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YO-Ez-OcB">
                                 <rect key="frame" x="81.5" y="418.5" width="251" height="59"/>
                                 <color key="backgroundColor" red="0.6549019814" green="0.95686274770000002" blue="0.96078431610000004" alpha="0.50364755794701987" colorSpace="custom" customColorSpace="displayP3"/>
@@ -673,10 +659,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="xWp-xT-gQb"/>
                     <connections>
-                        <outlet property="byouataiwatasi" destination="BO6-v4-qqH" id="Yye-SW-fYS"/>
                         <outlet property="end" destination="5YO-Ez-OcB" id="rHs-nM-5bR"/>
                         <outlet property="hunn" destination="5ce-hj-NeH" id="zsL-zE-v8J"/>
-                        <outlet property="hunnataiwatasi" destination="6eF-bf-RrI" id="EWT-fn-52n"/>
                         <outlet property="jikan" destination="RvA-px-cj1" id="zEx-oC-5vv"/>
                         <outlet property="start" destination="VYl-jZ-kAE" id="qJw-sD-qkz"/>
                     </connections>

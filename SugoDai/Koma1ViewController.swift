@@ -10,7 +10,6 @@ import UIKit
 class Koma1ViewController: UIViewController{
     
     var komasuu: Int = 0
-    //komasuu=受け取ったやつ
     var amarinokazu: Int = 0
     
     var susumukazu: Int = 0
@@ -28,9 +27,6 @@ class Koma1ViewController: UIViewController{
     
     let saveData: UserDefaults = UserDefaults.standard
     //saveDataはkomasuu＝その時にやった分だけしか進めない が入っている
-    
-    let goukei: UserDefaults = UserDefaults.standard
-    //今までの合計方法
     
     @IBOutlet weak var collection: UICollectionView!
     
@@ -52,36 +48,50 @@ class Koma1ViewController: UIViewController{
         collection.collectionViewLayout = layout
         //CollectionCellのレイアウト関係
         
-        if let koma = saveData.object(forKey: "countkoma") {
-            komasuu = koma as! Int
-        } 
-        //今回進んだ数
-        ///if letこうぶん
-        if let susumu = goukei.object(forKey: "goukei") {
-            //userdefaultsのなかみがnilじゃなかったら
-            susumukazu = susumu as! Int
-            //susumukazuは今まで進んでいた数
+//        if let koma = saveData.object(forKey: "countkoma") {
+//            komasuu = koma as! Int
+//        }
+//        //今回進んだ数
+//        ///if letこうぶん
+//        if let susumu = goukei.object(forKey: "goukei") {
+//            //userdefaultsのなかみがnilじゃなかったら
+//            susumukazu = susumu as! Int
+//            //susumukazuは今まで進んでいた数
+//        } else {
+//            //ここはUserDefaultsがnilの場合のコードを書く
+//        }
+//
+//        print("値渡しされた数は\(susumukazu)")
+//        susumukazu = komasuu + susumukazu //結果的に進む数
+//        print("結果的に進むのは\(susumukazu)")
+//        goukei.set(susumukazu, forKey: "goukei")
+//        //今現在進んだコマの総数を保存している
+//        section = susumukazu/3  //27/3=9  15/3=5 30/3=10 31/3=10 33/3=11/行数
+//        if section > 5 {
+//            nangyou = section / 5  ///9/5=1 10/5=2 11/5=2
+//            section = section - 5 * nangyou  ///9-5*1=4 0 10-5*2=0 11-5*2=1
+////            collection.reloadData()
+//        }
+//        print("\(section)行表示") //5 0
+//        amarinokazu = susumukazu%3 ///5%3 2 4%3 1  30%3=0
+////        collection.reloadData()
+//        print("\(amarinokazu)あまりの数")
+        if let gyou = saveData.object(forKey: "section") {
+           section = gyou as! Int
         } else {
-            //ここはUserDefaultsがnilの場合のコードを書く
+            susumukazu = 0
         }
-        
-        print("値渡しされた数は\(susumukazu)")
-        susumukazu = komasuu + susumukazu //結果的に進む数
-        print("結果的に進むのは\(susumukazu)")
-        goukei.set(susumukazu, forKey: "goukei")
-        //今現在進んだコマの総数を保存している
-        section = susumukazu/3  //27/3=9  15/3=5 30/3=10 31/3=10 33/3=11/行数
-        if section > 5 {
-            nangyou = section / 5  ///9/5=1 10/5=2 11/5=2
-            section = section - 5 * nangyou  ///9-5*1=4 0 10-5*2=0 11-5*2=1
-//            collection.reloadData()
+        if let amari = saveData.object(forKey: "amarinokazu") {
+            amarinokazu = amari as! Int
+        } else {
+            susumukazu = 0
         }
-        print("\(section)行表示") //5 0
-        amarinokazu = susumukazu%3 ///5%3 2 4%3 1  30%3=0
-//        collection.reloadData()
-        print("\(amarinokazu)あまりの数")
+        if let susumu = saveData.object(forKey: "total") {
+            susumukazu = susumu as! Int
+        } else {
+            susumukazu = 0
+        }
         collection.register(UINib(nibName: "CollectionCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CollectionViewCell")
-        
     }
         // Do any additional setup after loading the view
         
@@ -581,6 +591,22 @@ extension Koma1ViewController: UICollectionViewDelegate,UICollectionViewDataSour
                     if indexPath.row == 1 {
                         cell.Koma.image = UIImage(named: "マス")
                     }
+                }
+            case 0: //まだ何マスも進んでいなかったとき
+                if indexPath.section == 0 {
+                    cell.Koma.image = UIImage(named: "マス")
+                }
+                if indexPath.section == 1 {
+                    cell.Koma.image = UIImage(named: "マス")
+                }
+                if indexPath.section == 2 {
+                    cell.Koma.image = UIImage(named: "マス")
+                }
+                if indexPath.section == 3 {
+                    cell.Koma.image = UIImage(named: "マス")
+                }
+                if indexPath.section == 4 {
+                    cell.Koma.image = UIImage(named: "マス")
                 }
 
             default:

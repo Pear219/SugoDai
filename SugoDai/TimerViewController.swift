@@ -24,8 +24,12 @@ class TimerViewController: UIViewController {
     var strr = ""
     
     var count1: Int!
-    
     var count2: Int!
+    
+    var total: Int = 0
+    var section: Int = 0
+    var nangyou: Int = 0
+    var amarinokazu: Int = 0
     
     var timer: Timer = Timer()
     
@@ -89,8 +93,26 @@ class TimerViewController: UIViewController {
                 end.isHidden = false
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in ///0.5秒待つ
                     //すたんぷがいっこふえる！
-                    self.countkoma = self.countkoma + Int(str)!
-                    saveData.set(countkoma, forKey: "countkoma")
+//                    self.countkoma = self.countkoma + Int(str)!
+//                    saveData.set(countkoma, forKey: "countkoma")//9.18メモ
+                    if let goukeisuu = saveData.object(forKey:"total") { ///今までの数を出している
+                        total = goukeisuu as! Int
+                        //totalは今までの進んだ数
+                    } else {
+                        
+                    }
+                    total = total + Int(str)!
+                    //合算した
+                    section = total/3
+                    if total > 5 {
+                        nangyou = section/5
+                        section = section - 5 * nangyou
+                    } //sectionは何行表示させるか
+                    amarinokazu = total%3
+                    saveData.set(section, forKey: "section")
+                    saveData.set(amarinokazu, forKey: "amarinokazu")
+                    saveData.set(total, forKey: "total")
+                    
                     print("timerの分は\(str)")
     //                        let nextView = self.storyboard?.instantiateViewController(withIdentifier: "Koma1") as! Koma1ViewController
                     
