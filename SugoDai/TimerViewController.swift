@@ -16,9 +16,6 @@ class TimerViewController: UIViewController {
     
     @IBOutlet var end: UILabel!
     
-    @IBOutlet var hunnataiwatasi: UILabel!
-    @IBOutlet var byouataiwatasi: UILabel!
-    
     //いまたまってるすたんぷのかず。さいしょは0。
     var countkoma: Int = 0
     
@@ -44,9 +41,6 @@ class TimerViewController: UIViewController {
         
         jikan.text = str
         hunn.text = strr
-        
-        hunnataiwatasi.text = str
-        byouataiwatasi.text = strr
         
         count1 =  Int(str)
         count2 = Int(strr)
@@ -115,7 +109,6 @@ class TimerViewController: UIViewController {
 //
 //                print(str);
 //                print(strr)
-//                なぜかうまくいかんやつ
                 
                 
                     //一時的なコメself.navigationController?.popToRootViewController(animated: true)

@@ -9,22 +9,6 @@ import UIKit
 
 class Koma1ViewController: UIViewController{
     
-    @IBOutlet var Koma1: UIImageView!
-    @IBOutlet var Koma2: UIImageView!
-    @IBOutlet var Koma3: UIImageView!
-    @IBOutlet var Koma4: UIImageView!
-    @IBOutlet var Koma5: UIImageView!
-    @IBOutlet var Koma6: UIImageView!
-    @IBOutlet var Koma7: UIImageView!
-    @IBOutlet var Koma8: UIImageView!
-    @IBOutlet var Koma9: UIImageView!
-    @IBOutlet var Koma10: UIImageView!
-    @IBOutlet var Koma11: UIImageView!
-    @IBOutlet var Koma12: UIImageView!
-    @IBOutlet var Koma13: UIImageView!
-    @IBOutlet var Koma14: UIImageView!
-    @IBOutlet var Koma15: UIImageView!
-    
     var komasuu: Int = 0
     //komasuu=受け取ったやつ
     var amarinokazu: Int = 0
@@ -43,7 +27,7 @@ class Koma1ViewController: UIViewController{
     
     
     let saveData: UserDefaults = UserDefaults.standard
-    //saveDataはkomasuu＝その時にやった分だけしか進めない 奴が入っている
+    //saveDataはkomasuu＝その時にやった分だけしか進めない が入っている
     
     let goukei: UserDefaults = UserDefaults.standard
     //今までの合計方法
@@ -53,7 +37,7 @@ class Koma1ViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        collection.delegate = self
+//
 //        collection.dataSource = self
 //
         //count2 = saveData.object(forKey: "hunn") as? Int
@@ -66,24 +50,27 @@ class Koma1ViewController: UIViewController{
         layout.itemSize = CGSize(width:100 , height: 100)
         layout.sectionInset = UIEdgeInsets(top: 25,left: 15,bottom: 25,right: 15)
         collection.collectionViewLayout = layout
+        //CollectionCellのレイアウト関係
         
         if let koma = saveData.object(forKey: "countkoma") {
             komasuu = koma as! Int
-        }
-        ///komasuuはTimerから値渡しされたもの。現段階ではやった分だけ(○分)だけ進むようになった！！
+        } 
+        //今回進んだ数
         ///if letこうぶん
         if let susumu = goukei.object(forKey: "goukei") {
             //userdefaultsのなかみがnilじゃなかったら
             susumukazu = susumu as! Int
+            //susumukazuは今まで進んでいた数
         } else {
-            
+            //ここはUserDefaultsがnilの場合のコードを書く
         }
         
         print("値渡しされた数は\(susumukazu)")
         susumukazu = komasuu + susumukazu //結果的に進む数
-            print("結果的に進むのは\(susumukazu)")
+        print("結果的に進むのは\(susumukazu)")
         goukei.set(susumukazu, forKey: "goukei")
-        section = susumukazu/3  ///27/3=9  15/3=5 30/3=10 31/3=10 33/3=11
+        //今現在進んだコマの総数を保存している
+        section = susumukazu/3  //27/3=9  15/3=5 30/3=10 31/3=10 33/3=11/行数
         if section > 5 {
             nangyou = section / 5  ///9/5=1 10/5=2 11/5=2
             section = section - 5 * nangyou  ///9-5*1=4 0 10-5*2=0 11-5*2=1
