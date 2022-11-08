@@ -10,7 +10,6 @@ import UIKit
 class SetteiViewController: UIViewController {
     
     @IBOutlet var Settei1: UIButton!
-    @IBOutlet var Settei2: UIButton!
 
     override func viewDidLoad() {
         

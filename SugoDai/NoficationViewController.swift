@@ -1,35 +1,24 @@
 //
-//  KyukeijikanViewController.swift
+//  NoficationViewController.swift
 //  SugoDai
 //
-//  Created by 加藤 on 2022/03/08.
+//  Created by 加藤 on 2022/11/08.
 //
 
 import UIKit
 
-class KyukeijikanViewController: UIViewController, UITextFieldDelegate {
+class NoficationViewController: UIViewController {
     
-    @IBOutlet var TextField: UITextField!
-    @IBOutlet var TextField1: UITextField!
+    @IBOutlet var enter: UIButton!
 
     override func viewDidLoad() {
-        
-        TextField.delegate = self
-        
-        TextField1.delegate = self
-        
-        hidesBottomBarWhenPushed = true
-        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        enter.layer.cornerRadius = 10
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-    }
-    
-   
 
     /*
     // MARK: - Navigation

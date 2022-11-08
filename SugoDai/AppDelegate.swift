@@ -14,6 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.Thread 1: "could not dequeue a view of kind: UICollectionElementKindCell with identifier CollectionViewCell - must register a nib or a class for the identifier or connect a prototype cell
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (granted, _) in
+            if granted {
+                UNUserNotificationCenter.current().delegate = self
+            }
+        }
         return true
     }
 
@@ -33,4 +38,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(
+        _ center: UNUserNotificationCenter,
+        willPresent notification: UNNotification,
+        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+            if #available(iOS 14.0, *) {
+                completionHandler([[.banner, .list, .sound]])
+            } else {
+                completionHandler([[.alert, .sound]])
+            }
+        }
+}
+
 

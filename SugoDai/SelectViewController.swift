@@ -24,75 +24,20 @@ class SelectViewController: UIViewController {
     var label: Int!
     
     override func viewDidLoad() {
-//
-//        label = UD.object(forKey: "label") as? Int
-//
-//        if label == 1 {
-//            label1.text = UD.object(forKey: "text") as? String
-//        } else if label == 2 {
-//            label2.text = UD.object(forKey: "text") as? String
-//        } else if label == 3 {
-//            label3.text = UD.object(forKey: "text") as? String
-//        } else if label == 4 {
-//            label4.text = UD.object(forKey: "text") as? String
-//        }
-//
-//        if (label == 2 || label == 3 || label == 4 ) {
-//            label1.text = UD.object(forKey: "label1") as? String
-//        } else if  (label == 1 || label == 3 || label == 4 ) {
-//            label2.text = UD.object(forKey: "label2") as? String
-//        } else if (label == 1 || label == 2 || label == 4 ) {
-//            label3.text = UD.object(forKey: "label3") as? String
-//        } else if (label == 1 || label == 2 || label == 3 ) {
-//            label4.text = UD.object(forKey: "label4") as? String
-//        } else {
-//            label1.text = UD.object(forKey: "label1") as? String
-//            label2.text = UD.object(forKey: "label2") as? String
-//            label3.text = UD.object(forKey: "label3") as? String
-//            label4.text = UD.object(forKey: "label4") as? String
-//        }
-//
-//
-//        UD.set(label1.text, forKey: "label1")
-//        UD.set(label2.text, forKey: "label2")
-//        UD.set(label3.text, forKey: "label3")
-//        UD.set(label4.text, forKey: "label4")
-//
-//    print(label1.text!)
         
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let content = UNMutableNotificationContent()
+        content.title = "ここに通知のタイトル"
+        content.body = "ここに通知の本文"
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: (1*60), repeats: false)
+        let request = UNNotificationRequest(identifier: "notification", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
-//        label = UD.object(forKey: "label") as? Int
-//
-//        if label == 1 {
-//            label1.text = UD.object(forKey: "text") as? String
-//        } else if label == 2 {
-//            label2.text = UD.object(forKey: "text") as? String
-//        } else if label == 3 {
-//            label3.text = UD.object(forKey: "text") as? String
-//        } else if label == 4 {
-//            label4.text = UD.object(forKey: "text") as? String
-//        }
-//
-//        if (label == 2 || label == 3 || label == 4 ) {
-//            label1.text = UD.object(forKey: "label1") as? String
-//        } else if  (label == 1 || label == 3 || label == 4 ) {
-//            label2.text = UD.object(forKey: "label2") as? String
-//        } else if (label == 1 || label == 2 || label == 4 ) {
-//            label3.text = UD.object(forKey: "label3") as? String
-//        } else if (label == 1 || label == 2 || label == 3 ) {
-//            label4.text = UD.object(forKey: "label4") as? String
-//        } else {
-//            label1.text = UD.object(forKey: "label1") as? String
-//            label2.text = UD.object(forKey: "label2") as? String
-//            label3.text = UD.object(forKey: "label3") as? String
-//            label4.text = UD.object(forKey: "label4") as? String
-//        }
         
         label1.text = UD.object(forKey: "label1")as? String
         label2.text = UD.object(forKey: "label2")as? String

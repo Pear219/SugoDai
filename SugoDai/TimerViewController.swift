@@ -43,10 +43,12 @@ class TimerViewController: UIViewController {
         
         start.text = "START"
         
+        
+        
         jikan.text = str
         hunn.text = strr
-        
-        count1 =  Int(str)
+
+        count1 =  Int(str) 
         count2 = Int(strr)
         
         end.isHidden = true
@@ -122,22 +124,10 @@ class TimerViewController: UIViewController {
                     self.navigationController?.popToRootViewController(animated: true)
                     navigationController?.setNavigationBarHidden(false, animated: false)
                     
-                    }
-
-//                    self.saveData.set(self.count2,forKey: "hunn")
-                            }
-//                saveData.set(str, forKey: "hunn")
-//                saveData.set(strr, forKey: "byou")
-//
-//                print(str);
-//                print(strr)
+                }
                 
-                
-                    //一時的なコメself.navigationController?.popToRootViewController(animated: true)
-                 //let vc = sef.storyboard?.instantiateViewController(withIdentifier: "Koma1") as! Koma1ViewController
-                    //self.navigationController?.pushViewController(vc, animated: true)
-                
-     else if count1 > 0 { ///秒が0になったが、分の方はまだ０になっていない場合
+            }
+            else if count1 > 0 { ///秒が0になったが、分の方はまだ０になっていない場合
                 count1 = count1 - 1
                 count2 = 59
                 hunn.text = String(count2)

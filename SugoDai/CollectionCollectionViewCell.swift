@@ -20,5 +20,11 @@ class CollectionCollectionViewCell: UICollectionViewCell {
 //    func setUpContents(image: UIImage) {
 //        Koma.image = image
 //    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+
+        Koma.image = UIImage(named: "コマ影あり")
+    }
 
 }

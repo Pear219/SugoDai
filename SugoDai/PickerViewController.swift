@@ -19,7 +19,7 @@ class PickerViewController: UIViewController, UITextFieldDelegate {
         TextField1.delegate = self
         
         hidesBottomBarWhenPushed = true
-        
+
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -35,8 +35,9 @@ class PickerViewController: UIViewController, UITextFieldDelegate {
                     nextView.strr = TextField1.text!
                     nextView.str = TextField.text!
                 }
-  
-            
+        
+       
+        }
     /*
      // MARK: - Navigation
 
@@ -48,8 +49,6 @@ class PickerViewController: UIViewController, UITextFieldDelegate {
     */
 
  }
-}
-
 
 
 
