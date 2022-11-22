@@ -37,6 +37,8 @@ class TimerViewController: UIViewController {
     
     let saveData: UserDefaults = UserDefaults.standard
     
+    var UD: UserDefaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         
         navigationController?.setNavigationBarHidden(true, animated: false)
@@ -45,8 +47,11 @@ class TimerViewController: UIViewController {
         
         
         
-        jikan.text = str
-        hunn.text = strr
+        jikan.text = UD.object(forKey: "hour")as? String
+        hunn.text = UD.object(forKey: "minute")as? String
+        
+        str = jikan.text!
+        strr = hunn.text!
 
         count1 =  Int(str) 
         count2 = Int(strr)

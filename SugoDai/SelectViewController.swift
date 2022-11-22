@@ -20,24 +20,41 @@ class SelectViewController: UIViewController {
     @IBOutlet var label4: UILabel!
     
     var UD: UserDefaults = UserDefaults.standard
+    var saveData: UserDefaults = UserDefaults.standard
     
     var label: Int!
+    
+    var hour: Int!
+    var minute: Int!
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
 
+       
+        
+        
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
         // Do any additional setup after loading the view.
+        hour = Int((saveData.object(forKey: "timer") as? String)!)
+        minute = Int((saveData.object(forKey: "timerr") as? String)!)
+        print(hour!, "awa-")
         
         let content = UNMutableNotificationContent()
         content.title = "ここに通知のタイトル"
         content.body = "ここに通知の本文"
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: (1*60), repeats: false)
+//        let dateComponets = DateComponents(calendar: Calendar.current, timeZone: TimeZone.current, hour: hour, minute: minute)
+//        let trigger = UNTimeIntervalNotificationTrigger(init(dateMatching: <#T##DateComponents#>, repeats: <#T##Bool#>): dateComponets, repeats: true)
+        let dateComponets = DateComponents(
+            calendar: Calendar.current, timeZone: TimeZone.current,  hour: hour, minute: minute)
+        let trigger = UNCalendarNotificationTrigger(
+        dateMatching: dateComponets, repeats: true)
         let request = UNNotificationRequest(identifier: "notification", content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         
         label1.text = UD.object(forKey: "label1")as? String
         label2.text = UD.object(forKey: "label2")as? String

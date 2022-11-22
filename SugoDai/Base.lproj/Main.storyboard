@@ -25,7 +25,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="選択コマ.png"/>
                                 <connections>
-                                    <segue destination="6l5-C0-l7e" kind="show" id="Q4W-Fe-xhb"/>
+                                    <segue destination="3TP-Y1-6L7" kind="show" id="G8a-AV-IjB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13l-tP-BmP">
@@ -36,7 +36,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="選択コマ.png"/>
                                 <connections>
-                                    <segue destination="6l5-C0-l7e" kind="show" id="QYC-cS-ofV"/>
+                                    <segue destination="3TP-Y1-6L7" kind="show" id="lAn-Wm-eQl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJR-i0-c7T">
@@ -47,7 +47,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="選択コマ.png"/>
                                 <connections>
-                                    <segue destination="6l5-C0-l7e" kind="show" id="jn7-dg-9wn"/>
+                                    <segue destination="3TP-Y1-6L7" kind="show" id="yRF-mO-M7D"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7A-bF-0zI">
@@ -58,7 +58,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="選択コマ.png"/>
                                 <connections>
-                                    <segue destination="6l5-C0-l7e" kind="show" id="ASX-bx-69l"/>
+                                    <segue destination="3TP-Y1-6L7" kind="show" id="4Ds-Gg-9Cq"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ウォーキング" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4b-dD-WkC">
@@ -243,16 +243,23 @@
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="pgE-Gv-xPJ">
                                 <rect key="frame" x="0.0" y="278" width="414" height="226"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="didValueChangedDatePicker:" destination="8h4-f3-6ps" eventType="valueChanged" id="5QA-TH-SOq"/>
+                                </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y35-5f-u77">
                                 <rect key="frame" x="84" y="589" width="246" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.63529413940000001" green="0.97254908080000002" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.63529411764705879" green="0.97254901960784312" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="決定">
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="time" destination="8h4-f3-6ps" eventType="touchUpInside" id="I67-J2-uUM"/>
+                                    <segue destination="DbN-kW-06W" kind="show" id="x7V-9p-0aa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AA1-pX-B4t"/>
@@ -261,26 +268,12 @@
                     <navigationItem key="navigationItem" id="boc-Um-LNJ"/>
                     <connections>
                         <outlet property="enter" destination="Y35-5f-u77" id="k0z-ZC-mTJ"/>
+                        <outlet property="picker" destination="pgE-Gv-xPJ" id="DL9-PN-iaI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgx-hi-e3B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="844.92753623188412" y="2376.5625"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="wLc-TE-CJD">
-            <objects>
-                <viewController id="usx-I6-Z9S" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="uQd-ni-uuu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="BIn-L2-Dgj"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qPI-9L-Ize" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1855" y="2377"/>
         </scene>
         <!--Selected Settei View Controller-->
         <scene sceneID="NCK-Hq-bZg">
@@ -509,7 +502,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="InM-bG-ekY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3535" y="1602"/>
+            <point key="canvasLocation" x="1854" y="2377"/>
         </scene>
         <!--Picker View Controller-->
         <scene sceneID="eqc-aa-6y7">
@@ -566,11 +559,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WCk-9V-Oek">
-                        <barButtonItem key="rightBarButtonItem" title="決定" id="AfC-cT-Foc">
-                            <connections>
-                                <segue destination="EFN-Oy-RE0" kind="show" identifier="toNext" id="bI3-Ub-wAO"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="決定" id="AfC-cT-Foc"/>
                     </navigationItem>
                     <connections>
                         <outlet property="TextField" destination="AAk-UK-GAP" id="gmN-RW-rvP"/>
@@ -579,7 +568,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yrt-C0-bpW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3534.7826086956525" y="93.75"/>
+            <point key="canvasLocation" x="3545" y="888"/>
         </scene>
         <!--Timer View Controller-->
         <scene sceneID="Vn0-Gh-5wL">
@@ -666,6 +655,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qg9-eO-t6o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4356.521739130435" y="93.75"/>
+        </scene>
+        <!--Picker View Controller-->
+        <scene sceneID="pTA-h7-4Xc">
+            <objects>
+                <viewController id="3TP-Y1-6L7" customClass="PickerViewController" customModule="SugoDai" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dbg-Su-Bmf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ni4-aE-xnt">
+                                <rect key="frame" x="0.0" y="282" width="414" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="didChangeValue:" destination="3TP-Y1-6L7" eventType="valueChanged" id="CTL-Dx-ulH"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDp-IJ-gSE">
+                                <rect key="frame" x="93" y="531" width="228" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.63529413940000001" green="0.97254908080000002" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="START">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="save" destination="3TP-Y1-6L7" eventType="touchUpInside" id="wfe-0V-rgw"/>
+                                    <segue destination="EFN-Oy-RE0" kind="show" id="21K-DI-JS4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8wV-ps-MbZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="e8D-82-TTZ"/>
+                    <connections>
+                        <outlet property="picker" destination="Ni4-aE-xnt" id="5F9-0r-bLM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CO1-MC-0gP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3450.7246376811595" y="93.75"/>
         </scene>
         <!--koma-->
         <scene sceneID="ki0-dP-CsW">
@@ -778,7 +809,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QYC-cS-ofV"/>
+        <segue reference="lAn-Wm-eQl"/>
+        <segue reference="x7V-9p-0aa"/>
         <segue reference="2Gv-wz-qPh"/>
     </inferredMetricsTieBreakers>
     <resources>

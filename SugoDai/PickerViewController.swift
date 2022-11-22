@@ -9,14 +9,21 @@ import UIKit
 
 class PickerViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet var TextField: UITextField!
-    @IBOutlet var TextField1: UITextField!
+//    @IBOutlet var TextField: UITextField!
+//    @IBOutlet var TextField1: UITextField!
+    
+    @IBOutlet var picker: UIDatePicker!
+    
+    var hour: String!
+    var minute: String!
+    
+    var UD: UserDefaults = UserDefaults.standard
 
     override func viewDidLoad() {
         
-        TextField.delegate = self
-        
-        TextField1.delegate = self
+//        TextField.delegate = self
+//
+//        TextField1.delegate = self
         
         hidesBottomBarWhenPushed = true
 
@@ -25,16 +32,31 @@ class PickerViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-    }
+    @IBAction func didChangeValue(_ sender: UIDatePicker) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "H"
         
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-                if segue.identifier == "toNext" {
-                    let nextView = segue.destination as! TimerViewController
-                    nextView.strr = TextField1.text!
-                    nextView.str = TextField.text!
-                }
+        let formatterr = DateFormatter()
+        formatterr.dateFormat = "m"
+        
+        hour = formatter.string(from: picker.date)
+        minute = formatterr.string(from: picker.date)
+        
+    }
+    
+    @IBAction func save() {
+        UD.set(hour, forKey: "hour")
+        UD.set(minute, forKey: "minute")
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        textField.resignFirstResponder()
+//    }
+//
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//                if segue.identifier == "toNext" {
+//                    let nextView = segue.destination as! TimerViewController
+//                    nextView.strr = TextField1.text!
+//                    nextView.str = TextField.text!
+//                }
         
        
         }
