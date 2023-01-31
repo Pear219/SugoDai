@@ -29,8 +29,19 @@ class SelectViewController: UIViewController {
     
     override func viewDidLoad() {
         
+        if saveData.object(forKey: "timer") != nil {
+            
+        } else {
+            saveData.set(12, forKey: "timer")
+        }
+        
+        if saveData.object(forKey: "timerr") != nil {
+            
+        } else {
+            saveData.set(00, forKey: "timerr")
+        }
+        
         super.viewDidLoad()
-
        
         
         
@@ -40,9 +51,9 @@ class SelectViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         // Do any additional setup after loading the view.
-        hour = Int((saveData.object(forKey: "timer") as? String)!)
-        minute = Int((saveData.object(forKey: "timerr") as? String)!)
-        print(hour!, "awa-")
+        hour = saveData.object(forKey: "timer") as? Int
+        print("nyuuryokusitajikan", hour as Any)
+        minute = saveData.object(forKey: "timerr") as? Int
         
         let content = UNMutableNotificationContent()
         content.title = "ここに通知のタイトル"

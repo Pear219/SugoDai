@@ -14,6 +14,8 @@ class PickerViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var picker: UIDatePicker!
     
+    @IBOutlet var start: UIButton!
+    
     var hour: String!
     var minute: String!
     
@@ -28,6 +30,12 @@ class PickerViewController: UIViewController, UITextFieldDelegate {
         hidesBottomBarWhenPushed = true
 
         super.viewDidLoad()
+        
+        start.layer.cornerRadius = 10
+        start.layer.shadowRadius = 3
+        start.layer.shadowOpacity = 0.1
+        start.layer.shadowColor = UIColor.black.cgColor
+        start.layer.shadowOffset = CGSize(width: 2, height: 2)
 
         // Do any additional setup after loading the view.
     }

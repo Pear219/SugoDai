@@ -21,8 +21,6 @@ class NoficationViewController: UIViewController {
    
 
     override func viewDidLoad() {
-        
-        print(timer)
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -46,7 +44,6 @@ class NoficationViewController: UIViewController {
     @IBAction func time() {
         saveData.set(timer, forKey: "timer")
         saveData.set(timerr, forKey: "timerr")
-        print("ほぞんした", saveData.object(forKey: "timer")!)
         
     }
     

@@ -35,6 +35,10 @@ class TimerViewController: UIViewController {
     
     var susumukoma = ""
     
+    var time: Int = 0
+    
+    var tm: Int = 0
+    
     let saveData: UserDefaults = UserDefaults.standard
     
     var UD: UserDefaults = UserDefaults.standard
@@ -46,8 +50,22 @@ class TimerViewController: UIViewController {
         start.text = "START"
         
         
+        if UD.object(forKey: "hour") != nil {
+            jikan.text = UD.object(forKey: "hour") as? String
+        } else {
+            jikan.text = String(time)
+        }
+//        if let gyou = saveData.object(forKey: "section") {
+//           section = gyou as! Int
+//        } else {
+//            susumukazu = 0
+//        }
+        if UD.object(forKey: "minute") != nil {
+            hunn.text = UD.object(forKey: "minute") as? String
+        } else {
+            hunn.text = String(tm)
+        }
         
-        jikan.text = UD.object(forKey: "hour")as? String
         hunn.text = UD.object(forKey: "minute")as? String
         
         str = jikan.text!
@@ -98,6 +116,7 @@ class TimerViewController: UIViewController {
                 hunn.text = String(count2)
                 jikan.text = String(count1)
                 end.isHidden = false
+                saveData.set(count2, forKey: "count2") //時間をグラフの方に
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in ///0.5秒待つ
                     //すたんぷがいっこふえる！
 //                    self.countkoma = self.countkoma + Int(str)!
