@@ -14,9 +14,23 @@ class ChartsViewController: UIViewController {
     
     var hunn: Int = 0
     
+    let dateFormatter = DateFormatter()
+    
+    let date = Date()
+    
     @IBOutlet var barChartView: BarChartView!
-
+    
+  
+    
     override func viewDidLoad() {
+        
+        dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "Md", options: 0, locale: Locale(identifier: "ja_JP"))
+        
+        let dataString = dateFormatter.string(from: Date())
+        
+        print(dateFormatter.string(from: date))
+        
+        
         
         if saveData.object(forKey: "count2") != nil {
             hunn = saveData.object(forKey: "count2") as! Int
@@ -28,6 +42,7 @@ class ChartsViewController: UIViewController {
         //rawDataの要素番号にmap以下のコードを適用している。
         let entries = rawData.enumerated().map { BarChartDataEntry(x: Double($0.offset), y: Double($0.element)) }
         let dataSet = BarChartDataSet(entries: entries)
+        dataSet.valueFormatter = ChartValueFormatter()
         let data = BarChartData(dataSet: dataSet)
         barChartView.data = data
         
@@ -56,7 +71,15 @@ class ChartsViewController: UIViewController {
         barChartView.leftAxis.gridColor = .systemGray
         // 軸線は非表示にする
         barChartView.leftAxis.drawAxisLineEnabled = false
-        
+        //ピンチでズームが可能か
+                barChartView.pinchZoomEnabled = false
+                //ダブルタップでズームが可能か
+                barChartView.doubleTapToZoomEnabled = false
+                //ドラッグ可能か
+                barChartView.dragEnabled = false
+        //xy軸スケール拡大縮小をできなくする
+                barChartView.scaleXEnabled = false
+                barChartView.scaleYEnabled = false
         
 
         
@@ -67,3 +90,10 @@ class ChartsViewController: UIViewController {
     
 
 }
+
+class ChartValueFormatter: IValueFormatter {
+        
+    func stringForValue(_ value: Double, entry: ChartDataEntry, dataSetIndex: Int, viewPortHandler viewPorHandler: ViewPortHandler?)-> String {
+            return String(Int(entry.y))
+        }
+    }
