@@ -29,31 +29,28 @@ class SelectViewController: UIViewController {
     
     override func viewDidLoad() {
         
-        if saveData.object(forKey: "timer") != nil {
-            
-        } else {
-            saveData.set(12, forKey: "timer")
-        }
         
+        super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if saveData.object(forKey: "timer") == nil {
+            saveData.set(12, forKey: "timer")
+            print(1) //採用されている方
+        } else {
+            print(saveData.object(forKey: "timer") as Any)
+            hour = (saveData.object(forKey: "timer") as? Int)!
+        }
+        //つまりここではsavedataがnilじゃない判定
         if saveData.object(forKey: "timerr") != nil {
             
         } else {
             saveData.set(00, forKey: "timerr")
         }
         
-        super.viewDidLoad()
-       
-        
-        
-
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
         // Do any additional setup after loading the view.
-        hour = saveData.object(forKey: "timer") as? Int
-        print("nyuuryokusitajikan", hour as Any)
-        minute = saveData.object(forKey: "timerr") as? Int
+        print("nyuuryokusitajikan", saveData.object(forKey: "timer") as Any)
+        minute = saveData.object(forKey: "timerr") as? Int ?? 00
         
         let content = UNMutableNotificationContent()
         content.title = "ここに通知のタイトル"
@@ -62,6 +59,7 @@ class SelectViewController: UIViewController {
 //        let trigger = UNTimeIntervalNotificationTrigger(init(dateMatching: <#T##DateComponents#>, repeats: <#T##Bool#>): dateComponets, repeats: true)
         let dateComponets = DateComponents(
             calendar: Calendar.current, timeZone: TimeZone.current,  hour: hour, minute: minute)
+        print("タイマー" ,hour as Any, minute as Any)
         let trigger = UNCalendarNotificationTrigger(
         dateMatching: dateComponets, repeats: true)
         let request = UNNotificationRequest(identifier: "notification", content: content, trigger: trigger)

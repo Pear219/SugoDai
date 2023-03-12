@@ -29,16 +29,17 @@ class NoficationViewController: UIViewController {
     }
     
     @IBAction func didValueChangedDatePicker(_ sender: UIDatePicker) {
+        
         let formatter = DateFormatter()
         formatter.dateFormat = "HH"
         
         let formatterr = DateFormatter()
         formatterr.dateFormat = "mm"
         
-        timer = formatter.string(from: picker.date)
-        timerr = formatterr.string(from: picker.date)
+        timer = formatter.string(from: picker.date) as String
+        timerr = formatterr.string(from: picker.date) as String
         
-        print("入力した",timer as Any)
+        print("通知時間変更", timer as Any , timerr as Any)
     }
     
     @IBAction func time() {

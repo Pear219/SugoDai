@@ -43,7 +43,17 @@ class TimerViewController: UIViewController {
     
     var UD: UserDefaults = UserDefaults.standard
     
+    var dictionary: [String:[Int]] = [:] //空のdictionary
+    
+    var today: Date = Date()
+    
+    let dateformatter = DateFormatter()
+    
     override func viewDidLoad() {
+        
+        dateformatter.timeZone = TimeZone.current
+        dateformatter.dateFormat = "yyyy/MM/dd"
+        
         
         navigationController?.setNavigationBarHidden(true, animated: false)
         
@@ -69,7 +79,9 @@ class TimerViewController: UIViewController {
         hunn.text = UD.object(forKey: "minute")as? String
         
         str = jikan.text!
-        strr = hunn.text!
+        strr = hunn.text ?? String(0)
+       
+        
 
         count1 =  Int(str) 
         count2 = Int(strr)
@@ -112,6 +124,8 @@ class TimerViewController: UIViewController {
             hunn.text = String(count2)
         }  else if count2 == 0 {  ///秒がきっちり0になった
             if count1 == 0 {///秒も分も両方とも0になった時
+                dictionary[dateformatter.string(from: today)] = [count2]
+                print(dictionary)
                 timer.invalidate()
                 hunn.text = String(count2)
                 jikan.text = String(count1)
