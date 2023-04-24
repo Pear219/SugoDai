@@ -34,12 +34,23 @@ class SelectViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if saveData.object(forKey: "timer") == nil {
+       
+        /*
+         if saveData.object(forKey: "timer") == nil {
             saveData.set(12, forKey: "timer")
             print(1) //採用されている方
         } else {
             print(saveData.object(forKey: "timer") as Any)
-            hour = (saveData.object(forKey: "timer") as? Int)!
+            hour = (saveData.object(forKey: "timer") as Any) as? Int
+        }
+         */
+        
+        
+        if let hourAru = saveData.object(forKey: "timer") as? Int {
+            hour = hourAru
+            print("じかん", hour!)
+        } else {
+            saveData.set(12, forKey: "timer")
         }
         //つまりここではsavedataがnilじゃない判定
         if saveData.object(forKey: "timerr") != nil {
@@ -49,7 +60,7 @@ class SelectViewController: UIViewController {
         }
         
         // Do any additional setup after loading the view.
-        print("nyuuryokusitajikan", saveData.object(forKey: "timer") as Any)
+        print("nyuuryokusitajikan", hour!)
         minute = saveData.object(forKey: "timerr") as? Int ?? 00
         
         let content = UNMutableNotificationContent()
