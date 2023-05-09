@@ -138,8 +138,8 @@ class TimerViewController: UIViewController {
                 if key == true { //既にその日に運動をしていた場合
                     alreadytime = saveData.object(forKey: "sportstime") as? String//前に登録した時間を取得
                     var intalreadytime = Int(alreadytime) //それをint型に直している
-                    var intstrr = Int(strr)
-                    intstrr  = intalreadytime + intstrr //今までのやつと新しくやったものを合算する
+//                    var intstrr = Int(strr)
+//                    intstrr  = intalreadytime + intstrr //今までのやつと新しくやったものを合算する
                     saveData.set(strr, forKey: "sportstime")
                 } else { //初めてその日に運動をする場合
                     saveData.set(today, forKey: "today") //日付を登録
