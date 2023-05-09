@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		410102B7296D853000602B20 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 410102B6296D853000602B20 /* Charts */; };
 		4140B94828B4EBEE0073A827 /* SelectedSetteiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4140B94728B4EBEE0073A827 /* SelectedSetteiViewController.swift */; };
 		4140B94A28B66F3B0073A827 /* BackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4140B94928B66F3B0073A827 /* BackViewController.swift */; };
 		414905E2287D8761006AE05E /* CollectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414905E0287D8761006AE05E /* CollectionCollectionViewCell.swift */; };
@@ -27,6 +26,7 @@
 		418995C527A1482900ADEFA9 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418995C427A1482900ADEFA9 /* TimerViewController.swift */; };
 		418995C727A690B100ADEFA9 /* コマ.png in Resources */ = {isa = PBXBuildFile; fileRef = 418995C627A690B000ADEFA9 /* コマ.png */; };
 		418995CD27AA9F3800ADEFA9 /* Koma1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418995CC27AA9F3800ADEFA9 /* Koma1ViewController.swift */; };
+		41901E5729F7E621004213AA /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 41901E5629F7E621004213AA /* Charts */; };
 		4190B47B291A69E50068474C /* NoficationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4190B47A291A69E50068474C /* NoficationViewController.swift */; };
 		4193675827B00014004E3BB0 /* コマ影あり.png in Resources */ = {isa = PBXBuildFile; fileRef = 4193675727B00014004E3BB0 /* コマ影あり.png */; };
 		4193676227B8CAD2004E3BB0 /* SetteiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4193676127B8CAD2004E3BB0 /* SetteiViewController.swift */; };
@@ -91,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				410102B7296D853000602B20 /* Charts in Frameworks */,
+				41901E5729F7E621004213AA /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,7 +198,7 @@
 			);
 			name = SugoDai;
 			packageProductDependencies = (
-				410102B6296D853000602B20 /* Charts */,
+				41901E5629F7E621004213AA /* Charts */,
 			);
 			productName = SugoDai;
 			productReference = 4189958B27A0429000ADEFA9 /* SugoDai.app */;
@@ -272,7 +272,7 @@
 			);
 			mainGroup = 4189958227A0429000ADEFA9;
 			packageReferences = (
-				410102B5296D853000602B20 /* XCRemoteSwiftPackageReference "Charts" */,
+				41901E5529F7E621004213AA /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = 4189958C27A0429000ADEFA9 /* Products */;
 			projectDirPath = "";
@@ -667,20 +667,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		410102B5296D853000602B20 /* XCRemoteSwiftPackageReference "Charts" */ = {
+		41901E5529F7E621004213AA /* XCRemoteSwiftPackageReference "Charts" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/danielgindi/Charts.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
+				kind = exactVersion;
+				version = 4.1.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		410102B6296D853000602B20 /* Charts */ = {
+		41901E5629F7E621004213AA /* Charts */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 410102B5296D853000602B20 /* XCRemoteSwiftPackageReference "Charts" */;
+			package = 41901E5529F7E621004213AA /* XCRemoteSwiftPackageReference "Charts" */;
 			productName = Charts;
 		};
 /* End XCSwiftPackageProductDependency section */

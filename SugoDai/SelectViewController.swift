@@ -13,7 +13,6 @@ class SelectViewController: UIViewController {
     @IBOutlet var Button2: UIButton!
     @IBOutlet var Button3: UIButton!
     @IBOutlet var Button4: UIButton!
-    
     @IBOutlet var label1: UILabel!
     @IBOutlet var label2: UILabel!
     @IBOutlet var label3: UILabel!
@@ -27,13 +26,17 @@ class SelectViewController: UIViewController {
     var hour: Int!
     var minute: Int!
     
+    var today = Date()
+    
     override func viewDidLoad() {
+    
         
         
         super.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
        
         /*
          if saveData.object(forKey: "timer") == nil {
@@ -60,7 +63,7 @@ class SelectViewController: UIViewController {
         }
         
         // Do any additional setup after loading the view.
-        print("nyuuryokusitajikan", hour!)
+        print("nyuuryokusitajikan", hour)
         minute = saveData.object(forKey: "timerr") as? Int ?? 00
         
         let content = UNMutableNotificationContent()

@@ -14,21 +14,27 @@ class ChartsViewController: UIViewController {
     
     var hunn: Int = 0
     
-    let dateFormatter = DateFormatter()
-    
-    let date = Date()
+    let dateformatter = DateFormatter()
+    var dic: Dictionary<String,Int> = [:]
     
     @IBOutlet var barChartView: BarChartView!
+    
+    var today: String!
+    
+    var sportstime: String!
     
   
     
     override func viewDidLoad() {
         
-        dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "Md", options: 0, locale: Locale(identifier: "ja_JP"))
+//        dateformatter.timeZone = TimeZone.current
+//        dateformatter.dateFormat = "yyyy/MM/dd"
+//        today = dateformatter.string(from:Date())
         
-        let dataString = dateFormatter.string(from: Date())
+//
+//        dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "Md", options: 0, locale: Locale(identifier: "ja_JP"))
         
-        print(dateFormatter.string(from: date))
+//        let dataString = dateFormatter.string(from: Date())
         
         
         
@@ -42,7 +48,7 @@ class ChartsViewController: UIViewController {
         //rawDataの要素番号にmap以下のコードを適用している。
         let entries = rawData.enumerated().map { BarChartDataEntry(x: Double($0.offset), y: Double($0.element)) }
         let dataSet = BarChartDataSet(entries: entries)
-        dataSet.valueFormatter = ChartValueFormatter()
+//        dataSet.valueFormatter = ChartValueFormatter()
         let data = BarChartData(dataSet: dataSet)
         barChartView.data = data
         
@@ -88,12 +94,32 @@ class ChartsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        today = saveData.object(forKey: "today") as? String
+        sportstime = saveData.object(forKey: "sportstime") as? String
+        
+        var key = dic.keys.contains(today) //今日やったかどうか
+        print(key)
+        var intsportstime = Int(sportstime)
+        if key == true { //既にこの日に行った場合
+            dic.updateValue(intsportstime ?? 0, forKey: today)
+        } else  { //この日初めて行う場合
+            dic[today] = intsportstime
+        }
+        
+    }
+    
+        
+    
 
 }
 
-class ChartValueFormatter: IValueFormatter {
-        
-    func stringForValue(_ value: Double, entry: ChartDataEntry, dataSetIndex: Int, viewPortHandler viewPorHandler: ViewPortHandler?)-> String {
-            return String(Int(entry.y))
-        }
-    }
+
+//class ChartValueFormatter: IValueFormatter {
+//
+//    func stringForValue(_ value: Double, entry: ChartDataEntry, dataSetIndex: Int, viewPortHandler viewPorHandler: ViewPortHandler?)-> String {
+//            return String(Int(entry.y))
+//        }
+//    }
+

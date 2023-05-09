@@ -43,16 +43,25 @@ class TimerViewController: UIViewController {
     
     var UD: UserDefaults = UserDefaults.standard
     
-    var dictionary: [String:[Int]] = [:] //空のdictionary
+    var dictionary: [String:Int] = [:] //空のdictionary
     
-    var today: Date = Date()
+//    var today: Date = Date()
     
     let dateformatter = DateFormatter()
+    
+//    dateformatter.timeZone = TimeZone.current
+//    dateformatter.dateFormat = "yyyy/MM/dd"
+//
+    var today: String!
+    
+    var alreadytime: String!
     
     override func viewDidLoad() {
         
         dateformatter.timeZone = TimeZone.current
         dateformatter.dateFormat = "yyyy/MM/dd"
+        today = dateformatter.string(from:Date())
+        
         
         
         navigationController?.setNavigationBarHidden(true, animated: false)
@@ -124,8 +133,19 @@ class TimerViewController: UIViewController {
             hunn.text = String(count2)
         }  else if count2 == 0 {  ///秒がきっちり0になった
             if count1 == 0 {///秒も分も両方とも0になった時
-                dictionary[dateformatter.string(from: today)] = [count2]
-                print(dictionary)
+                var key = dictionary.keys.contains(today)
+                print(key)
+                if key == true { //既にその日に運動をしていた場合
+                    alreadytime = saveData.object(forKey: "sportstime") as? String//前に登録した時間を取得
+                    var intalreadytime = Int(alreadytime) //それをint型に直している
+                    var intstrr = Int(strr)
+                    intstrr  = intalreadytime + intstrr //今までのやつと新しくやったものを合算する
+                    saveData.set(strr, forKey: "sportstime")
+                } else { //初めてその日に運動をする場合
+                    saveData.set(today, forKey: "today") //日付を登録
+                    saveData.set(count2, forKey: "sportstime") //運動した時間を登録
+                    dictionary[today] = count2
+                }
                 timer.invalidate()
                 hunn.text = String(count2)
                 jikan.text = String(count1)
@@ -172,6 +192,6 @@ class TimerViewController: UIViewController {
                 jikan.text = String(count1)
             }
         }
-    }    
+    }
 
 }
