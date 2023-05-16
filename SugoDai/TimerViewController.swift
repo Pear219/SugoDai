@@ -133,18 +133,34 @@ class TimerViewController: UIViewController {
             hunn.text = String(count2)
         }  else if count2 == 0 {  ///秒がきっちり0になった
             if count1 == 0 {///秒も分も両方とも0になった時
-                var key = dictionary.keys.contains(today)
-                print(key)
-                if key == true { //既にその日に運動をしていた場合
-                    alreadytime = saveData.object(forKey: "sportstime") as? String//前に登録した時間を取得
-                    var intalreadytime = Int(alreadytime) //それをint型に直している
+                print("で、keyの中身は",today!)
+                if dictionary.keys.contains(today) { //既にその日に運動をしていた場合, todayが既にあるかどうか確認
+//                    alreadytime = saveData.object(forKey: "sportstime") as? String//前に登録した時間を取得
+//                    if let alreadytime = saveData.object(forKey: "sportstime") as? String{
+//                       var intalreadytime = Int(alreadytime)
+//                        if strr == nil {
+//                        } else {
+//                            intstrr = Int(strr)
+//                            intstrr  = intalreadytime + intstrr //今までのやつと新しくやったものを合算する
+//                        }
+//                    } else {
+//
+//                    }
 //                    var intstrr = Int(strr)
-//                    intstrr  = intalreadytime + intstrr //今までのやつと新しくやったものを合算する
-                    saveData.set(strr, forKey: "sportstime")
+//                    saveData.set(strr, forKey: "sportstime")
+//                    alreadytime = saveData.object(forKey: "sportstime") as? String
+                    alreadytime = str + alreadytime
+                    saveData.set(alreadytime, forKey: "sportstime")
+                    print("橋二度目")
+                    //alreadytimeから以前までやっていた時間を取り出して今やった時間と合わせる→setしてchartsに送っている
                 } else { //初めてその日に運動をする場合
+                    print("今日初めての運動!!!")
                     saveData.set(today, forKey: "today") //日付を登録
-                    saveData.set(count2, forKey: "sportstime") //運動した時間を登録
+                    saveData.set(str, forKey: "sportstime") //運動した時間を登録
                     dictionary[today] = count2
+                    if let keyyy = dictionary.first(where: { $0.value == count2 })?.key {
+                        print("値の所在地は",keyyy) // "apple"
+                    }
                 }
                 timer.invalidate()
                 hunn.text = String(count2)

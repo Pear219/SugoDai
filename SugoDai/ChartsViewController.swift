@@ -23,10 +23,15 @@ class ChartsViewController: UIViewController {
     
     var sportstime: String!
     
+    var chartstoday: String!
+    
   
     
     override func viewDidLoad() {
         
+        dateformatter.timeZone = TimeZone.current
+        dateformatter.dateFormat = "yyyy/MM/dd"
+        chartstoday = dateformatter.string(from:Date())
 //        dateformatter.timeZone = TimeZone.current
 //        dateformatter.dateFormat = "yyyy/MM/dd"
 //        today = dateformatter.string(from:Date())
@@ -99,15 +104,19 @@ class ChartsViewController: UIViewController {
         today = saveData.object(forKey: "today") as? String
         sportstime = saveData.object(forKey: "sportstime") as? String
         
-        var key = dic.keys.contains(today) //今日やったかどうか
-        print(key)
-        var intsportstime = Int(sportstime)
-        if key == true { //既にこの日に行った場合
-            dic.updateValue(intsportstime ?? 0, forKey: today)
-        } else  { //この日初めて行う場合
-            dic[today] = intsportstime
-        }
         
+//        let key = dic.keys.contains(today) //今日やったかどうか
+        let intsportstime = Int(sportstime)!
+        print("やった時間は...",intsportstime)
+//        if today == chartstoday {
+//            print("今日やった")
+////        print("今日やったかどうか",key)
+////        if key == true { //既にこの日に行った場合
+//            dic.updateValue(intsportstime, forKey: today)
+//        } else  { //この日初めて行う場合
+//            print("今日やってない")
+//            dic[today] = intsportstime
+//        }
     }
     
         
