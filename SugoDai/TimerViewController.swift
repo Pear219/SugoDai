@@ -146,6 +146,8 @@ class TimerViewController: UIViewController {
 //                    } else {
 //
 //                    }
+                    
+                    
 //                    var intstrr = Int(strr)
 //                    saveData.set(strr, forKey: "sportstime")
 //                    alreadytime = saveData.object(forKey: "sportstime") as? String
