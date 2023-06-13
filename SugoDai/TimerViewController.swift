@@ -69,20 +69,24 @@ class TimerViewController: UIViewController {
         start.text = "START"
         
         
-        if UD.object(forKey: "hour") != nil {
-            jikan.text = UD.object(forKey: "hour") as? String
+        
+        if let hour = UD.object(forKey: "hour") as? String, !hour.isEmpty {
+            jikan.text = hour
+            print("わわわ",hour)
         } else {
             jikan.text = String(time)
+            print("nil判定")
         }
 //        if let gyou = saveData.object(forKey: "section") {
 //           section = gyou as! Int
 //        } else {
 //            susumukazu = 0
 //        }
-        if UD.object(forKey: "minute") != nil {
-            hunn.text = UD.object(forKey: "minute") as? String
+        if let minute = UD.object(forKey: "minute") as? String, !minute.isEmpty {
+            hunn.text = minute
         } else {
-            hunn.text = String(tm)
+            hunn.text = String(0)
+            print("nil判定")
         }
         
         hunn.text = UD.object(forKey: "minute")as? String
@@ -100,6 +104,12 @@ class TimerViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        if (saveData.object(forKey: "dateData") != nil) {
+            dictionary = saveData.object(forKey: "dateData") as! [String : Int]
+        } else {
+            
+        }
     }
     
     @IBAction func timerr() {
@@ -134,6 +144,8 @@ class TimerViewController: UIViewController {
         }  else if count2 == 0 {  ///秒がきっちり0になった
             if count1 == 0 {///秒も分も両方とも0になった時
                 print("で、keyの中身は",today!)
+                print("で、keyは",dictionary)
+                print(dictionary.keys.contains(today))
                 if dictionary.keys.contains(today) { //既にその日に運動をしていた場合, todayが既にあるかどうか確認
 //                    alreadytime = saveData.object(forKey: "sportstime") as? String//前に登録した時間を取得
 //                    if let alreadytime = saveData.object(forKey: "sportstime") as? String{
@@ -146,20 +158,33 @@ class TimerViewController: UIViewController {
 //                    } else {
 //
 //                    }
-                    
-                    
 //                    var intstrr = Int(strr)
 //                    saveData.set(strr, forKey: "sportstime")
 //                    alreadytime = saveData.object(forKey: "sportstime") as? String
-                    alreadytime = str + alreadytime
-                    saveData.set(alreadytime, forKey: "sportstime")
-                    print("橋二度目")
+                    print("sport", saveData.object(forKey: "sportstime"))
+                    if saveData.object(forKey: "sportstime") != nil {
+                        alreadytime = saveData.object(forKey: "sportstime") as! String
+                        print("alreadytimeは,", alreadytime)
+                        if alreadytime != nil {
+                            alreadytime = str + alreadytime //三度目以上
+                            print("3度目でs")
+                        } else {
+                            alreadytime = str //二度目
+                            print("二度目です")
+                        }
+                        saveData.set(alreadytime, forKey: "sportstime")
+                        print("橋二度目", alreadytime)
+                    } else {
+                        
+                    }
                     //alreadytimeから以前までやっていた時間を取り出して今やった時間と合わせる→setしてchartsに送っている
                 } else { //初めてその日に運動をする場合
                     print("今日初めての運動!!!")
                     saveData.set(today, forKey: "today") //日付を登録
                     saveData.set(str, forKey: "sportstime") //運動した時間を登録
                     dictionary[today] = count2
+                    saveData.set(dictionary, forKey: "dateData")
+                    print("しんきとうろく", dictionary, str)
                     if let keyyy = dictionary.first(where: { $0.value == count2 })?.key {
                         print("値の所在地は",keyyy) // "apple"
                     }

@@ -25,8 +25,6 @@ class ChartsViewController: UIViewController {
     
     var chartstoday: String!
     
-  
-    
     override func viewDidLoad() {
         
         dateformatter.timeZone = TimeZone.current
@@ -103,11 +101,89 @@ class ChartsViewController: UIViewController {
         
         today = saveData.object(forKey: "today") as? String
         sportstime = saveData.object(forKey: "sportstime") as? String
-        
-        
+
 //        let key = dic.keys.contains(today) //今日やったかどうか
+//        let intsportstime = Int(sportstime)!
+        
+        if today == nil {
+            print("todayはnilだよ")
+            today = chartstoday
+        } else {
+            
+        }
+        if sportstime == nil {
+            print("sportstimeはnilだよ")
+            sportstime = String(0)
+        } else {
+            
+        }
+        
         let intsportstime = Int(sportstime)!
+        
         print("やった時間は...",intsportstime)
+        if dic.keys.contains(chartstoday) {
+            dic.updateValue(intsportstime, forKey: today) //今日二度目のcharts
+            print("今日二度目以降のcharts")
+        } else {
+            dic[today] = intsportstime
+            print("今日初めてのcharts")
+            print(intsportstime)
+        }
+        
+        // dicのキーと値を取得し、バーチャートのデータとして設定する
+            var dataEntries: [BarChartDataEntry] = []
+            for (index, (key, value)) in dic.enumerated() {
+                let dataEntry = BarChartDataEntry(x: Double(index), y: Double(value))
+                dataEntries.append(dataEntry)
+            }
+            
+            // データセットを作成し、バーチャートにセットする
+            let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Sport Time")
+            let chartData = BarChartData(dataSet: chartDataSet)
+            barChartView.data = chartData
+        
+        let groupSpace = 0.3 // グループ間のスペース
+            let barSpace = 0.05 // バー間のスペース
+            let barWidth = 0.3 // バーの幅
+        
+        chartData.barWidth = barWidth
+        chartData.groupWidth(groupSpace: 0.3, barSpace: 0.05)
+        
+        let maxValue = dic.values.max() ?? 0 // 最大値を取得（もし値がない場合は0とする）
+            let yAxisMax = Double(maxValue + 20) // 最大値に20を加えた値を設定
+            barChartView.leftAxis.axisMaximum = yAxisMax
+            
+            // x軸のラベルを設定
+            barChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: Array(dic.keys))
+        
+        // x軸のラベルを縦に表示する
+            barChartView.xAxis.labelRotationAngle = -90
+            barChartView.xAxis.granularityEnabled = true
+            barChartView.xAxis.granularity = 1
+            barChartView.xAxis.labelCount = dic.count
+            
+            // バーチャートの更新
+            barChartView.notifyDataSetChanged()
+        
+//        let rawData: [Int] = [20, 50, 70, 30, 60, 90, 40]
+//        //rawDataの要素番号にmap以下のコードを適用している。
+//        let entries = rawData.enumerated().map { BarChartDataEntry(x: Double($0.offset), y: Double($0.element)) }
+//        let dataSet = BarChartDataSet(entries: entries)
+////        dataSet.valueFormatter = ChartValueFormatter()
+//        let data = BarChartData(dataSet: dataSet)
+//        barChartView.data = data
+        
+//        var dataEntries: [BarChartDataEntry] = []
+//
+//        for (index, (key, value)) in dic.enumerated() {
+//                    let dataEntry = BarChartDataEntry(x: Double(index), y: Double(value))
+//                    dataEntries.append(dataEntry)
+//                }
+//
+//        let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Sport Time") // データセットを作成
+//                let chartData = BarChartData(dataSet: chartDataSet) // チャートデータを作成
+//
+//                barChartView.data = chartData
 //        if today == chartstoday {
 //            print("今日やった")
 ////        print("今日やったかどうか",key)

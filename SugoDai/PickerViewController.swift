@@ -14,7 +14,7 @@ class PickerViewController: UIViewController, UITextFieldDelegate {
     
     
     
-    @IBOutlet var picker: UIDatePicker!
+//    @IBOutlet var picker: UIDatePicker!
     
     @IBOutlet var start: UIButton!
     
@@ -22,6 +22,9 @@ class PickerViewController: UIViewController, UITextFieldDelegate {
     var minute: String!
     
     var UD: UserDefaults = UserDefaults.standard
+    
+    @IBOutlet var textField1: UITextField!
+    @IBOutlet var textField2: UITextField!
 
     override func viewDidLoad() {
         
@@ -42,21 +45,23 @@ class PickerViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func didChangeValue(_ sender: UIDatePicker) {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "H"
-        
-        let formatterr = DateFormatter()
-        formatterr.dateFormat = "m"
-        
-        hour = formatter.string(from: picker.date)
-        minute = formatterr.string(from: picker.date)
-        
-    }
+//    @IBAction func didChangeValue(_ sender: UIDatePicker) {
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "H"
+//
+//        let formatterr = DateFormatter()
+//        formatterr.dateFormat = "m"
+//
+//        hour = formatter.string(from: picker.date)
+//        minute = formatterr.string(from: picker.date)
+//
+//    }
     
     @IBAction func save() {
-        UD.set(hour, forKey: "hour")
-        UD.set(minute, forKey: "minute")
+        
+        
+        UD.set(textField1.text, forKey: "hour")
+        UD.set(textField2.text, forKey: "minute")
 //    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 //        textField.resignFirstResponder()
 //    }

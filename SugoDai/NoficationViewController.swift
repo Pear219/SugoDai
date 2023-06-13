@@ -26,6 +26,10 @@ class NoficationViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         enter.layer.cornerRadius = 10
+        enter.layer.shadowRadius = 3
+        enter.layer.shadowOpacity = 0.1
+        enter.layer.shadowColor = UIColor.black.cgColor
+        enter.layer.shadowOffset = CGSize(width: 2, height: 2)
     }
     
     @IBAction func didValueChangedDatePicker(_ sender: UIDatePicker) {
