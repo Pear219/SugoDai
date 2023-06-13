@@ -74,7 +74,7 @@ class TimerViewController: UIViewController {
             jikan.text = hour
             print("わわわ",hour)
         } else {
-            jikan.text = String(time)
+           // jikan.text = String(time)
             print("nil判定")
         }
 //        if let gyou = saveData.object(forKey: "section") {
@@ -83,9 +83,11 @@ class TimerViewController: UIViewController {
 //            susumukazu = 0
 //        }
         if let minute = UD.object(forKey: "minute") as? String, !minute.isEmpty {
+            
             hunn.text = minute
         } else {
-            hunn.text = String(0)
+            print(time)
+            hunn.text = String(time)
             print("nil判定")
         }
         
