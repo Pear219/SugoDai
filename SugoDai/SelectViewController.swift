@@ -85,8 +85,7 @@ class SelectViewController: UIViewController {
         label4.text = UD.object(forKey: "label4")as? String
         
         
-        
-        
+    
         ///初期値または一度も変更されていなかった場合
         if UD.object(forKey: "label1") != nil {
             
