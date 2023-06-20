@@ -50,6 +50,29 @@ class NoficationViewController: UIViewController {
         saveData.set(timer, forKey: "timer")
         saveData.set(timerr, forKey: "timerr")
         
+        let content = UNMutableNotificationContent()
+        content.title = "運動の時間になりました"
+        content.body = "今日も頑張りましょう"
+        content.sound = UNNotificationSound.default
+        
+        let triggerHour = Int(timer) ?? 0
+        let triggerMinute = Int(timerr) ?? 0
+        
+        var dateComponets = DateComponents()
+        dateComponets.hour = triggerHour
+        dateComponets.minute = triggerMinute
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponets, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "uniqueIdentifer", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request) { (error) in
+            if let error = error {
+                print("通知の登録に失敗しました")
+            } else {
+                print("通知がセットされました")
+            }
+        }
     }
     
 

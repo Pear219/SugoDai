@@ -21,7 +21,7 @@ class ChartsViewController: UIViewController {
     
     var today: String!
     
-    var sportstime: String!
+    var sportstime: Int!
     
     var chartstoday: String!
     
@@ -100,7 +100,7 @@ class ChartsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         today = saveData.object(forKey: "today") as? String
-        sportstime = saveData.object(forKey: "sportstime") as? String
+        sportstime = saveData.object(forKey: "sportstime") as? Int
 
 //        let key = dic.keys.contains(today) //今日やったかどうか
 //        let intsportstime = Int(sportstime)!
@@ -113,21 +113,21 @@ class ChartsViewController: UIViewController {
         }
         if sportstime == nil {
             print("sportstimeはnilだよ")
-            sportstime = String(0)
+            sportstime = 0
         } else {
             
         }
         
-        let intsportstime = Int(sportstime)!
+//        let intsportstime = sportstime
         
-        print("やった時間は...",intsportstime)
+        print("やった時間は...",sportstime)
         if dic.keys.contains(chartstoday) {
-            dic.updateValue(intsportstime, forKey: today) //今日二度目のcharts
+            dic.updateValue(sportstime, forKey: today) //今日二度目のcharts
             print("今日二度目以降のcharts")
         } else {
-            dic[today] = intsportstime
+            dic[today] = sportstime
             print("今日初めてのcharts")
-            print(intsportstime)
+            print(sportstime)
         }
         
         // dicのキーと値を取得し、バーチャートのデータとして設定する

@@ -7,7 +7,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7239D5EE-5605-4BE0-9CBC-4103F9445C51"
+            uuid = "9FB89B2D-E75E-4F44-9082-0EDB98996911"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -18,53 +18,6 @@
             endingLineNumber = "90"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "7239D5EE-5605-4BE0-9CBC-4103F9445C51 - 2cb06d8df4b49bdd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SugoDai.TimerViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "SugoDai"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kato/Desktop/SugoDai/SugoDai/TimerViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
-                  offsetFromSymbolStart = "3456">
-               </Location>
-               <Location
-                  uuid = "7239D5EE-5605-4BE0-9CBC-4103F9445C51 - 2cb06d8df4b49bdd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SugoDai.TimerViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "SugoDai"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kato/Desktop/SugoDai/SugoDai/TimerViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
-                  offsetFromSymbolStart = "3360">
-               </Location>
-               <Location
-                  uuid = "7239D5EE-5605-4BE0-9CBC-4103F9445C51 - 2cb06d8df4b49bdd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SugoDai.TimerViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "SugoDai"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kato/Desktop/SugoDai/SugoDai/TimerViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
-                  offsetFromSymbolStart = "3068">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

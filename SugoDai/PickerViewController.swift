@@ -9,17 +9,10 @@ import UIKit
 
 class PickerViewController: UIViewController, UITextFieldDelegate {
     
-//    @IBOutlet var TextField: UITextField!
-//    @IBOutlet var TextField1: UITextField!
-    
-    
-    
-//    @IBOutlet var picker: UIDatePicker!
-    
     @IBOutlet var start: UIButton!
-    
-    var hour: String!
-    var minute: String!
+
+    var hour: Int!
+    var minute: Int!
     
     var UD: UserDefaults = UserDefaults.standard
     
@@ -27,11 +20,6 @@ class PickerViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var textField2: UITextField!
 
     override func viewDidLoad() {
-        
-//        TextField.delegate = self
-//
-//        TextField1.delegate = self
-        
         hidesBottomBarWhenPushed = true
 
         super.viewDidLoad()
@@ -45,21 +33,7 @@ class PickerViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
     }
     
-//    @IBAction func didChangeValue(_ sender: UIDatePicker) {
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "H"
-//
-//        let formatterr = DateFormatter()
-//        formatterr.dateFormat = "m"
-//
-//        hour = formatter.string(from: picker.date)
-//        minute = formatterr.string(from: picker.date)
-//
-//    }
-    
     @IBAction func save() {
-        
-        
         UD.set(textField1.text, forKey: "hour")
         UD.set(textField2.text, forKey: "minute")
 //    func textFieldShouldReturn(_ textField: UITextField) -> Bool {

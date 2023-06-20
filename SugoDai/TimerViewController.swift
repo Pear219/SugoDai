@@ -19,7 +19,7 @@ class TimerViewController: UIViewController {
     //いまたまってるすたんぷのかず。さいしょは0。
     var countkoma: Int = 0
     
-    var str = ""
+    var str: Int!
     
     var strr = ""
     
@@ -54,7 +54,7 @@ class TimerViewController: UIViewController {
 //
     var today: String!
     
-    var alreadytime: String!
+    var alreadytime: Int!
     
     override func viewDidLoad() {
         
@@ -74,7 +74,7 @@ class TimerViewController: UIViewController {
             jikan.text = hour
             print("わわわ",hour)
         } else {
-           // jikan.text = String(time)
+            jikan.text = String(time)
             print("nil判定")
         }
 //        if let gyou = saveData.object(forKey: "section") {
@@ -93,7 +93,7 @@ class TimerViewController: UIViewController {
         
         hunn.text = UD.object(forKey: "minute")as? String
         
-        str = jikan.text!
+        str = Int(jikan.text!)
         strr = hunn.text ?? String(0)
        
         
@@ -149,9 +149,6 @@ class TimerViewController: UIViewController {
                 print("で、keyは",dictionary)
                 print(dictionary.keys.contains(today))
                 if dictionary.keys.contains(today) { //既にその日に運動をしていた場合, todayが既にあるかどうか確認
-//                    alreadytime = saveData.object(forKey: "sportstime") as? String//前に登録した時間を取得
-//                    if let alreadytime = saveData.object(forKey: "sportstime") as? String{
-//                       var intalreadytime = Int(alreadytime)
 //                        if strr == nil {
 //                        } else {
 //                            intstrr = Int(strr)
@@ -160,15 +157,12 @@ class TimerViewController: UIViewController {
 //                    } else {
 //
 //                    }
-//                    var intstrr = Int(strr)
-//                    saveData.set(strr, forKey: "sportstime")
-//                    alreadytime = saveData.object(forKey: "sportstime") as? String
                     print("sport", saveData.object(forKey: "sportstime"))
                     if saveData.object(forKey: "sportstime") != nil {
-                        alreadytime = saveData.object(forKey: "sportstime") as! String
+                        alreadytime = saveData.object(forKey: "sportstime") as? Int
                         print("alreadytimeは,", alreadytime)
                         if alreadytime != nil {
-                            alreadytime = str + alreadytime //三度目以上
+                            alreadytime = str + alreadytime //三度目以上,この時点でintになっていたい
                             print("3度目でs")
                         } else {
                             alreadytime = str //二度目
@@ -183,7 +177,7 @@ class TimerViewController: UIViewController {
                 } else { //初めてその日に運動をする場合
                     print("今日初めての運動!!!")
                     saveData.set(today, forKey: "today") //日付を登録
-                    saveData.set(str, forKey: "sportstime") //運動した時間を登録
+                    saveData.set(Int(str), forKey: "sportstime") //運動した時間を登録
                     dictionary[today] = count2
                     saveData.set(dictionary, forKey: "dateData")
                     print("しんきとうろく", dictionary, str)
@@ -197,16 +191,13 @@ class TimerViewController: UIViewController {
                 end.isHidden = false
                 saveData.set(count2, forKey: "count2") //時間をグラフの方に
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in ///0.5秒待つ
-                    //すたんぷがいっこふえる！
-//                    self.countkoma = self.countkoma + Int(str)!
-//                    saveData.set(countkoma, forKey: "countkoma")//9.18メモ
                     if let goukeisuu = saveData.object(forKey:"total") { ///今までの数を出している
                         total = goukeisuu as! Int
                         //totalは今までの進んだ数
                     } else {
                         
                     }
-                    total = total + Int(str)!
+                    total = total + str
                     //合算した
                     section = total/3
                     if total > 5 {
